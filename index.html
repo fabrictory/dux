@@ -76,6 +76,7 @@ h2.q{font-size:clamp(28px,3.9vw,50px)}
 .step h3{margin:0;font-size:24px}
 .step h3+p{margin-top:8px;font-size:17px}
 .step .of{font-size:13px;font-weight:500;color:var(--accent);margin-bottom:2px}
+#film{padding-top:90px}
 .film{display:block;width:100%;height:auto;aspect-ratio:16/9;background:#0E1326}
 .facts{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:22px 32px;margin:40px 0 0;padding:0}
 .facts dt{font-size:13px;color:var(--muted)}
@@ -201,15 +202,10 @@ html[lang="zh-CN"] h1,html[lang="zh-CN"] h2,html[lang="zh-CN"] .person h3,html[l
 <main>
 
 <section class="sec" id="film">
-  <div class="row">
-    <div class="label"><span data-zh="视频">영상</span></div>
-    <div>
-      <video class="film" controls playsinline preload="none" poster="tour-poster.jpg" width="1280" height="720" aria-label="덕스 미래 아카데미 소개 영상">
-        <source src="tour.mp4" type="video/mp4">
-      </video>
-      <p class="fine" data-zh="介绍视频（韩语配音与字幕）· 2分27秒">소개 영상 · 2분 27초</p>
-    </div>
-  </div>
+  <video class="film" controls playsinline preload="none" poster="tour-poster.jpg" width="1280" height="720" aria-label="덕스 미래 아카데미 소개 영상">
+    <source src="tour.mp4" type="video/mp4">
+  </video>
+  <p class="fine" data-zh="介绍视频（韩语配音与字幕）· 2分27秒">소개 영상 · 2분 27초</p>
 </section>
 
 <section class="sec" id="why">
