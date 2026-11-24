@@ -147,7 +147,7 @@ h2.q{font-size:clamp(28px,3.9vw,50px)}
 .vs p{font-size:16px;font-weight:300;margin-top:10px;line-height:1.6}
 .keys{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:32px;margin-top:52px}
 .keys>div{border-top:1px solid var(--ink);padding-top:18px}
-.keys b{display:block;font-size:26px;letter-spacing:-.04em}
+.keys b{display:block;font-size:26px;font-weight:800;letter-spacing:-.04em;color:var(--accent)}
 .keys p{font-size:16px;font-weight:300;margin-top:10px;line-height:1.6}
 .shots{display:grid;grid-template-columns:repeat(auto-fit,minmax(290px,1fr));gap:40px 32px;margin-top:48px}
 .shots figure{margin:0}
@@ -162,7 +162,8 @@ h2.q{font-size:clamp(28px,3.9vw,50px)}
 .day b{font-size:17px;font-weight:700}
 .day .t{font-size:13px;color:var(--muted);font-weight:500;margin-top:3px}
 .day p{font-size:17px;font-weight:300;line-height:1.6}
-.base{margin-top:40px;font-size:17px;font-weight:500;max-width:720px;line-height:1.6}
+.base{margin-top:40px;font-size:clamp(20px,2vw,26px);font-weight:700;letter-spacing:-.03em;max-width:720px;line-height:1.45}
+.basesub{margin-top:10px;font-size:16px;font-weight:300;color:var(--muted);max-width:720px;line-height:1.6}
 .price .hl .k{font-weight:500}
 .price .hl .v{color:var(--accent)}
 .price{margin-top:22px;border-bottom:1px solid var(--line);max-width:720px}
@@ -473,17 +474,17 @@ html[lang="zh-CN"] h1,html[lang="zh-CN"] h2,html[lang="zh-CN"] .cols h3,html[lan
         <article>
           <div class="dh"><b data-zh="第 2 天">2일차</b><span data-zh="1 月 28 日 · 机器人在工作的地方">1월 28일 · 로봇이 일하는 곳</span></div>
           <div class="pix">
-            <figure><img src="p-hall.jpg" width="1080" height="565" alt="휴머노이드 로봇이 늘어선 전시장" loading="lazy"><figcaption data-zh="人形机器人展厅">휴머노이드 로봇 전시장</figcaption></figure>
+            <figure><img src="p-hall.jpg" width="1080" height="565" alt="휴머노이드 로봇이 늘어선 전시장" loading="lazy"><figcaption data-zh="人形机器人孵化器">휴머노이드 로봇 인큐베이터</figcaption></figure>
             <figure><img src="p-store.jpg" width="1080" height="720" alt="AI 제품 체험 매장의 전시 복도" loading="lazy"><figcaption data-zh="AI 体验商店">AI 체험 매장</figcaption></figure>
-            <figure><img src="p-kit.jpg" width="900" height="709" alt="조립해서 완성한 음성 로봇 교구" loading="lazy"><figcaption data-zh="机器人制作工作坊">로봇 만들기 워크숍</figcaption></figure>
+            <figure><img src="p-kit.jpg" width="900" height="709" alt="조립해서 완성한 음성 로봇 교구" loading="lazy"><figcaption data-zh="语音机器人制作儿童工作坊">음성 로봇 만들기 키즈 워크숍</figcaption></figure>
             <figure><img src="p-bus.jpg" width="830" height="470" alt="운전석이 없는 자율주행 버스" loading="lazy"><figcaption data-zh="自动驾驶 · 无人机">자율주행 · 드론</figcaption></figure>
           </div>
           <ul>
-            <li data-zh="人形机器人孵化器 —— 需提前登记才能进入的空间。机器人迎宾与表演，人形与四足机器人近在眼前，还能尝一尝机械臂冲的咖啡与冰淇淋"><b>휴머노이드 로봇 인큐베이터</b> — 사전 등록을 거쳐 들어가는 공간입니다. 로봇의 환영 인사와 공연을 보고 사람을 닮은 로봇과 네 발로 걷는 로봇을 가까이서 봅니다. 로봇 팔이 내려 준 커피와 아이스크림도 맛봅니다</li>
-            <li data-zh="AI 体验商店 —— 约 2,000㎡，100 多个品牌、500 多种 AI 产品，分六个区域，一件件上手试过来"><b>AI 체험 매장</b> — 약 2,000㎡에 100여 개 브랜드, 500여 종의 AI 제품이 여섯 구역에 있습니다. 하나씩 손에 쥐고 써 봅니다</li>
-            <li data-zh="机器人制作工作坊 —— 在创客空间里学原理、动手组装。做好的语音机器人带回家"><b>로봇 만들기 워크숍</b> — 메이커 공간에서 원리를 배우고 직접 조립합니다. 완성한 음성 로봇은 집으로 가져갑니다</li>
-            <li data-zh="自动驾驶 · 无人机 —— 在示范区看无人巴士行驶，并亲自下单，用无人机把饮料送到手上"><b>자율주행 · 드론</b> — 시범 구역에서 무인 버스가 달리는 것을 보고 직접 주문한 음료를 드론으로 받아 봅니다</li>
-            <li class="wrap" data-zh="每一段结束后，김덕진 所长当场讲解刚看到的技术。">코스가 끝날 때마다 김덕진 소장이 방금 본 기술을 그 자리에서 풀어 줍니다</li>
+            <li data-zh="人形机器人孵化器 —— 需提前登记进入的非公开空间。机器人迎宾与表演，人形、四足机器人近距离观察，机械臂冲制的咖啡与冰淇淋品尝"><b>휴머노이드 로봇 인큐베이터</b> — 사전 등록이 필요한 비공개 공간. 로봇의 환영 인사와 공연, 휴머노이드·사족보행 로봇 근접 관찰, 로봇 팔이 내려 주는 커피와 아이스크림 시음</li>
+            <li data-zh="AI 体验商店 —— 约 2,000㎡，100 多个品牌、500 多种 AI 产品分设六个区域，全部可上手体验"><b>AI 체험 매장</b> — 약 2,000㎡ 규모, 100여 개 브랜드의 AI 제품 500여 종을 여섯 구역에 배치. 전 품목 직접 조작 가능</li>
+            <li data-zh="语音机器人制作儿童工作坊（仅限孩子参加）—— 在创客空间学习原理并亲手组装，完成的语音机器人带回家"><b>음성 로봇 만들기 키즈 워크숍(어린이들만 참여)</b> — 메이커 공간에서 원리 학습 후 직접 조립. 완성한 음성 로봇은 각자 가져가기</li>
+            <li data-zh="自动驾驶 · 无人机 —— 示范区内无人巴士运行观察，自行下单后由无人机配送饮料"><b>자율주행 · 드론</b> — 시범 구역의 무인 버스 주행 관찰, 직접 주문한 음료를 드론으로 수령</li>
+            <li class="wrap" data-zh="每一处结束后，由 김덕진 所长现场讲解刚看到的技术">코스마다 김덕진 소장의 현장 해설</li>
           </ul>
         </article>
 
@@ -492,15 +493,15 @@ html[lang="zh-CN"] h1,html[lang="zh-CN"] h2,html[lang="zh-CN"] .cols h3,html[lan
           <div class="pix">
             <figure><img src="p-museum.jpg" width="1024" height="682" alt="상하이 과학기술관 전경" loading="lazy"><figcaption data-zh="上海科技馆">상하이 과학기술관</figcaption></figure>
             <figure><img src="p-arm.jpg" width="660" height="495" alt="물류 작업을 하는 산업용 휴머노이드" loading="lazy"><figcaption data-zh="机器人企业参访">로봇 기업 방문</figcaption></figure>
-            <figure><img src="p-shelf.jpg" width="750" height="562" alt="로봇 제품이 진열된 매장" loading="lazy"><figcaption data-zh="机器人经营的门店">로봇 운영 매장</figcaption></figure>
+            <figure><img src="p-shelf.jpg" width="750" height="562" alt="로봇 제품이 진열된 매장" loading="lazy"><figcaption data-zh="机器人运营的门店">로봇 운영 매장</figcaption></figure>
             <figure><img src="p-show.jpg" width="960" height="720" alt="쇼룸에 서 있는 휴머노이드 로봇" loading="lazy"><figcaption data-zh="机器人旗舰店（亚洲首店）">로봇 플래그십 매장 · 아시아 1호</figcaption></figure>
           </div>
           <ul>
-            <li data-zh="上海科技馆 —— 挑重点看。体验互动展项，看机器人表演"><b>상하이 과학기술관</b> — 넓어서 전부는 못 봅니다. 중요한 곳을 골라 손으로 하는 전시를 체험하고 로봇 공연을 봅니다</li>
-            <li data-zh="机器人企业参访 —— 人形机器人企业的总部。看工业用人形机器人做物流与制造，并直接听现场工程师讲它由什么零件、什么技术组成。这里是大家每天上班工作的地方"><b>로봇 기업 방문</b> — 휴머노이드를 만드는 기업의 본사입니다. 산업용 로봇이 물건을 나르고 조립하는 작업을 보고 어떤 부품과 기술로 되어 있는지 현장 엔지니어에게 직접 듣습니다. 사람들이 매일 출근해 일하는 공간입니다</li>
-            <li data-zh="机器人经营的门店 —— 机器人现做的冰淇淋，机器人照看的电子产品卖场。技术在这里已经是生意"><b>로봇 운영 매장</b> — 로봇이 그 자리에서 만들어 주는 아이스크림을 먹고, 로봇이 지키는 전자제품 매장을 돌아봅니다. 기술이 이미 장사가 된 현장입니다</li>
-            <li data-zh="机器人旗舰店 —— 亚洲首店。看人形机器人与机械狗，亲自用语音下指令"><b>로봇 플래그십 매장</b> — 아시아 1호점입니다. 휴머노이드와 기계 강아지를 보고 아이가 직접 목소리로 명령을 내려 봅니다</li>
-            <li class="wrap" data-zh="一天结束时，임한나 代表带大家把看到的变成自己的话，和父母一起整理。">하루를 마치며 임한나 대표가 본 것을 자기 말로 바꾸는 시간을 이끕니다. 부모와 함께 정리합니다</li>
+            <li data-zh="上海科技馆 —— 历经近三年升级改造、2026 年焕新开馆的国家一级博物馆。十大常设展区中，AI 与机器人专区「明日行者」为重点，展出群智机器人、机械外骨骼、脑机产品等。全馆展品 926 件，其中约八成可互动"><b>상하이 과학기술관</b> — 3년에 가까운 리모델링을 마치고 2026년 재개관한 국가 1급 박물관. 10개 상설 전시구역 가운데 AI·로봇 전문 구역 「밍르싱저(明日行者)」가 핵심으로, 군집 로봇과 외골격, 뇌-기계 인터페이스 제품을 전시. 전체 926건 가운데 약 80%가 직접 조작 가능</li>
+            <li data-zh="机器人企业参访 —— 人形机器人制造企业总部。工业机器人的物流与装配作业观察，零部件与技术构成由现场工程师直接讲解。员工每日办公的实际场所"><b>로봇 기업 방문</b> — 휴머노이드 제조 기업의 본사. 산업용 로봇의 물류·조립 작업 관찰, 부품과 기술 구성은 현장 엔지니어가 직접 설명. 직원들이 매일 근무하는 실제 공간</li>
+            <li data-zh="机器人运营的门店 —— 机器人现制冰淇淋，机器人运营的电子产品卖场。技术已进入实际经营的现场"><b>로봇 운영 매장</b> — 로봇이 즉석에서 만드는 아이스크림, 로봇이 운영하는 전자제품 매장. 기술이 실제 영업으로 이어진 현장</li>
+            <li data-zh="机器人旗舰店 —— 亚洲首店。人形机器人与机械狗展示，孩子可亲自用语音下达指令"><b>로봇 플래그십 매장</b> — 아시아 1호점. 휴머노이드와 사족보행 로봇 전시, 아이가 직접 음성으로 명령</li>
+            <li class="wrap" data-zh="一天结束时由 임한나 代表主持整理环节，把所见转化为自己的语言，并与父母一同梳理">하루 마무리 — 임한나 대표 진행. 본 것을 자기 언어로 바꾸고 부모와 함께 정리</li>
           </ul>
         </article>
 
@@ -601,7 +602,8 @@ html[lang="zh-CN"] h1,html[lang="zh-CN"] h2,html[lang="zh-CN"] .cols h3,html[lan
     <div class="label"><b>08</b><span data-zh="包含与准备">포함 · 준비</span></div>
     <div>
       <h2><span data-zh="包含什么，">무엇이 포함되고,</span><span data-zh="需要准备什么？">무엇을 준비하나요?</span></h2>
-      <p class="base" data-zh="本营的标准费用为每人 400 万韩元。为纪念第一届亲子营，第一轮的 15 个家庭以家庭为单位接待。">이 캠프의 기준 참가비는 1인 400만 원입니다. 제1회 키즈 캠프를 여는 뜻으로 1차 15가족에 한해 제1회 기념 할인을 드립니다.</p>
+      <p class="base" data-zh="本营的标准费用为每人 400 万韩元。">이 캠프의 기준 참가비는 1인 400만 원입니다.</p>
+      <p class="basesub" data-zh="为纪念第一届亲子营，第一轮的 15 个家庭享第一届纪念优惠。">제1회 키즈 캠프를 여는 뜻으로 1차 15가족에 한해 제1회 기념 할인을 드립니다.</p>
       <div class="price">
         <div class="hl"><div class="k" data-zh="第一届纪念优惠 · 第一轮先到先得 15 个家庭<span>父母 1 人 + 孩子 1 人 · 不含机票与住宿</span>">제1회 기념 할인 · 1차 선착순 15가족<span>부모 1인 + 어린이 1인 · 항공료·숙박료 미포함</span></div><div class="v" data-zh="450 万韩元">450만 원</div></div>
         <div><div class="k" data-zh="第一轮结束后<span>父母 1 人 + 孩子 1 人为准</span>">1차 마감 이후<span>부모 1인 + 어린이 1인 기준</span></div><div class="v" data-zh="500 万韩元">500만 원</div></div>
