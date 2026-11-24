@@ -113,6 +113,25 @@ h2.q{font-size:clamp(28px,3.9vw,50px)}
 .step.sm{padding:16px 0}
 .step .when{font-size:14px;color:var(--muted)}
 .step.sm p{font-size:16px}
+.shots{display:grid;grid-template-columns:repeat(auto-fit,minmax(290px,1fr));gap:40px 32px;margin-top:48px}
+.shots figure{margin:0}
+.shots img{width:100%;aspect-ratio:3/2;object-fit:cover;display:block;background:#E8EBF2}
+.shots h3{margin:16px 0 0;font-size:22px;letter-spacing:-.03em}
+.shots .of{font-size:13px;font-weight:600;color:var(--accent);margin-top:14px}
+.shots p{font-size:16px;font-weight:300;margin-top:8px;line-height:1.6}
+.band{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-top:44px}
+.band img{width:100%;aspect-ratio:4/3;object-fit:cover;display:block;background:#E8EBF2}
+.days{margin-top:44px;border-bottom:1px solid var(--line)}
+.day{display:grid;grid-template-columns:150px minmax(0,1fr);gap:4px 24px;border-top:1px solid var(--line);padding:20px 0}
+.day b{font-size:17px;font-weight:700}
+.day .t{font-size:13px;color:var(--muted);font-weight:500;margin-top:3px}
+.day p{font-size:17px;font-weight:300;line-height:1.6}
+.price{margin-top:40px;border-bottom:1px solid var(--line);max-width:720px}
+.price>div{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:4px 24px;border-top:1px solid var(--line);padding:18px 0;align-items:baseline}
+.price .k{font-size:17px}
+.price .k span{display:block;font-size:14px;color:var(--muted);font-weight:300;margin-top:4px}
+.price .v{font-size:26px;font-weight:800;letter-spacing:-.03em;white-space:nowrap}
+.price .v.sm{font-size:19px}
 ul.note{list-style:none;margin:28px 0 0;padding:0;border-bottom:1px solid var(--line);max-width:640px}
 ul.note li{border-top:1px solid var(--line);padding:13px 0 13px 18px;position:relative;font-size:16px;font-weight:300}
 ul.note li::before{content:"·";position:absolute;left:2px;color:var(--accent);font-weight:700}
@@ -209,6 +228,10 @@ footer .brand{color:var(--ink)}
   .spec>div{grid-template-columns:1fr}
   .spec dd{font-size:18px}
   .faq summary{font-size:18px}
+  .day{grid-template-columns:1fr}
+  .day .t{margin-bottom:6px}
+  .band{grid-template-columns:1fr 1fr}
+  .price .v{font-size:22px}
   .axa{grid-template-columns:1fr;gap:10px 0;padding:28px 0}
   .axa .x{padding-top:0;text-align:center}
   footer{padding:80px 20px 50px}
@@ -238,7 +261,8 @@ html[lang="zh-CN"] h1,html[lang="zh-CN"] h2,html[lang="zh-CN"] .cols h3,html[lan
     <nav>
       <a href="#tour" data-zh="亲子营">캠프</a>
       <a href="#whycamp" data-zh="理由">왜</a>
-      <a href="#flow" data-zh="流程">진행</a>
+      <a href="#flow" data-zh="流程">일정</a>
+      <a href="#scene" data-zh="现场">현장</a>
       <a href="#people" data-zh="导师">강사진</a>
       <a href="#include" data-zh="包含">포함</a>
       <a href="#faq" data-zh="问答">질문</a>
@@ -300,17 +324,17 @@ html[lang="zh-CN"] h1,html[lang="zh-CN"] h2,html[lang="zh-CN"] .cols h3,html[lan
     <div class="label"><b>02</b><span data-zh="营地概览">캠프 개요</span></div>
     <div>
       <h2><span data-zh="2027年1月27—30日，">2027년 1월 27–30일,</span><span data-zh="上海。">상하이.</span></h2>
-      <p class="lead" data-zh="父母和孩子看同一个现场，交流同一个问题。7 岁以上的孩子与监护人一同参加，名额为先到先得的 15 个家庭。">부모와 아이가 같은 현장을 보고 같은 질문을 나눕니다. 7세 이상 자녀와 보호자가 함께 참가하고, 정원은 선착순 15가족입니다.</p>
+      <p class="lead" data-zh="父母和孩子看同一个现场，交流同一个问题。7 岁以上的孩子与监护人一同参加，第一轮招募 15 个家庭。">부모와 아이가 같은 현장을 보고 같은 질문을 나눕니다. 7세 이상 자녀와 보호자가 함께 참가하고, 1차 모집은 선착순 15가족입니다.</p>
       <dl class="spec">
         <div><dt data-zh="营名">캠프명</dt><dd data-zh="第1届 DUX 未来学院 AI 洞察营">제1회 덕스 미래 아카데미 AI 인사이트 캠프</dd></div>
         <div><dt data-zh="日期">일정</dt><dd data-zh="2027.1.27(周三)–30(周六)，4天3晚">2027. 1. 27(수) – 30(토), 3박 4일</dd></div>
         <div><dt data-zh="地点">장소</dt><dd data-zh="中国上海">중국 상하이</dd></div>
         <div><dt data-zh="对象">대상</dt><dd data-zh="7 岁以上的孩子与监护人">7세 이상 자녀와 보호자</dd></div>
-        <div><dt data-zh="名额">정원</dt><dd data-zh="15 个家庭，按报名先后">선착순 15가족</dd></div>
+        <div><dt data-zh="名额">모집</dt><dd data-zh="第一轮 15 个家庭，按报名先后">1차 선착순 15가족</dd></div>
         <div><dt data-zh="导师">강사</dt><dd>김덕진 · 임한나</dd></div>
-        <div><dt data-zh="费用">참가비</dt><dd data-zh="另行通知">추후 안내</dd></div>
+        <div><dt data-zh="费用">참가비</dt><dd data-zh="第一轮 450 万韩元 / 家庭">1차 450만 원 / 가정</dd></div>
       </dl>
-      <p class="notice" data-zh="具体活动正在准备中。请在收到确认通知后再预订机票。">세부 프로그램은 준비 중입니다. 항공권은 확정 안내를 받은 뒤 예매해 주세요.</p>
+      <p class="notice" data-zh="日程与内容可能因当地情况而变动。请在收到确认通知后再预订机票。">일정과 내용은 현지 상황에 따라 변경될 수 있습니다. 항공권은 확정 안내를 받은 뒤 예매해 주세요.</p>
       <p style="margin-top:26px"><a class="textlink" href="#apply" data-zh="报名参加 →">참가 신청하기 →</a></p>
     </div>
   </div>
@@ -386,32 +410,105 @@ html[lang="zh-CN"] h1,html[lang="zh-CN"] h2,html[lang="zh-CN"] .cols h3,html[lan
 
 <section class="sec" id="flow">
   <div class="row">
-    <div class="label"><b>05</b><span data-zh="流程">진행 방식</span></div>
+    <div class="label"><b>05</b><span data-zh="日程">일정</span></div>
     <div>
       <h2><span data-zh="营地怎样进行？">캠프는 어떻게 진행되나요?</span></h2>
-      <p class="lead" data-zh="每天的具体日程确定后另行通知。学习按 SEE · FEEL · MAKE 的顺序展开。">날짜별 일정은 확정되는 대로 안내합니다. 배움은 SEE · FEEL · MAKE의 순서로 이어집니다.</p>
+      <p class="lead" data-zh="4 天 3 晚。中间两天走现场，最后一天留给家庭的自由时间。">3박 4일입니다. 가운데 이틀은 현장을 돌고, 마지막 날은 가족의 자유 시간으로 둡니다.</p>
+      <div class="days">
+        <div class="day"><div><b data-zh="第 1 天">1일차</b><div class="t" data-zh="1 月 27 日（周三）">1월 27일(수)</div></div><p data-zh="午后抵达上海，入住酒店后举行开营说明与分组见面，接着一起用晚餐。">오후에 상하이에 도착해 호텔에 짐을 풀고, 오리엔테이션과 조별 인사를 한 뒤 함께 저녁을 먹습니다.</p></div>
+        <div class="day"><div><b data-zh="第 2 天">2일차</b><div class="t" data-zh="1 月 28 日（周四）">1월 28일(목)</div></div><p data-zh="机器人生态的现场。全天行程。">로봇이 일하고 있는 현장을 돕니다. 하루 종일 이어지는 일정입니다.</p></div>
+        <div class="day"><div><b data-zh="第 3 天">3일차</b><div class="t" data-zh="1 月 29 日（周五）">1월 29일(금)</div></div><p data-zh="展馆、企业总部与门店。全天行程。">전시관과 기업, 로봇이 운영하는 매장을 돕니다. 하루 종일 이어지는 일정입니다.</p></div>
+        <div class="day"><div><b data-zh="第 4 天">4일차</b><div class="t" data-zh="1 月 30 日（周六）">1월 30일(토)</div></div><p data-zh="自由时间。各家庭可自行安排，下午搭机返回。移动方式等基本信息会提前告知。">자유 시간입니다. 가족끼리 시간을 보내고 오후 비행기로 돌아옵니다. 이동 방법 같은 기본 안내는 미리 드립니다.</p></div>
+      </div>
+      <p class="lead" style="margin-top:54px" data-zh="两天的现场，学习按 SEE · FEEL · MAKE 的顺序展开。">이틀의 현장에서 배움은 SEE · FEEL · MAKE의 순서로 이어집니다.</p>
       <div class="steps">
-        <div class="step sm"><span class="when" data-zh="开始">시작</span><div><p data-zh="以开营说明和讲座开始。">오리엔테이션과 강의로 캠프를 엽니다.</p></div></div>
         <div class="step"><b>SEE</b><div><div class="of" data-zh="人工智能的 AI">인공지능의 AI</div><h3 data-zh="观察">봅니다</h3><p data-zh="走进机器人、生活中的 AI、未来出行真实运转的现场，看一看，摸一摸。김덕진 所长当场讲解刚刚看到的技术是什么。">로봇, 생활 속 AI, 미래 이동수단이 실제로 움직이는 현장에서 보고 만져 봅니다. 김덕진 소장이 방금 본 기술이 무엇인지 그 자리에서 풀어 줍니다.</p></div></div>
         <div class="step"><b>FEEL</b><div><div class="of" data-zh="情感智能的 AI">정서지능의 AI</div><h3 data-zh="表达">말합니다</h3><p data-zh="임한나 代表引导，把感受变成自己的话。">임한나 대표가 이끕니다. 느낌을 자기 말로 바꿉니다.</p></div></div>
         <div class="step"><b>MAKE</b><div><div class="of">AI × AI</div><h3 data-zh="创作">만듭니다</h3><p data-zh="做一个小机器人，再用 AI 把自己的想法做成作品。">손으로도 만들고, AI로도 만듭니다.</p></div></div>
-        <div class="step sm"><span class="when" data-zh="结束">마무리</span><div><p data-zh="发表作品，并以结业式收尾。">결과물을 발표하고 수료식으로 마칩니다.</p></div></div>
+        <div class="step sm"><span class="when" data-zh="收尾">마무리</span><div><p data-zh="分享各自的作品，并颁发结业证书与营地手册。">각자 만든 것을 나누고, 수료증과 캠프 책자를 드립니다.</p></div></div>
       </div>
       <div class="pair">
         <div><span class="en" data-zh="父母的时间">부모의 시간</span><p data-zh="全程与孩子同行。">전 일정을 아이와 함께합니다.</p></div>
         <div><span class="en" data-zh="孩子的时间">아이의 시간</span><p data-zh="行程中另有只面向孩子的课程。">일정 중 아이들끼리만 듣는 수업이 따로 있습니다.</p></div>
       </div>
-      <p class="fine" data-zh="参访地点与具体活动将在实地考察后确定并另行通知。">방문지와 세부 프로그램은 현지 실사 후 확정해 안내합니다.</p>
+      <p class="fine" data-zh="日程、车辆移动与体验顺序可能因当地情况而变动。部分机器人演示可能因维护而暂停，无人巴士与无人机配送的运行会受天气影响。">일정과 이동, 체험 순서는 현지 상황에 따라 바뀔 수 있습니다. 전시 로봇은 점검 일정에 따라 움직이지 않을 수 있고, 무인 버스와 드론 배송은 날씨에 따라 운영이 달라집니다.</p>
+    </div>
+  </div>
+</section>
+
+<section class="sec" id="scene">
+  <div class="row">
+    <div class="label"><b>06</b><span data-zh="现场">현장</span></div>
+    <div>
+      <h2><span data-zh="现场会看到什么？">현장에서 무엇을 보나요?</span></h2>
+      <p class="lead" data-zh="都是已经在营业、已经在工作的地方。孩子不是隔着屏幕看，而是走进去、伸手摸。">모두 이미 문을 열고, 이미 일하고 있는 곳입니다. 화면 너머가 아니라 안으로 들어가 직접 만져 봅니다.</p>
+      <div class="shots">
+        <figure>
+          <img src="p-hall.jpg" width="1080" height="565" alt="휴머노이드 로봇이 늘어선 전시장" loading="lazy">
+          <div class="of" data-zh="人形机器人">휴머노이드 로봇</div>
+          <h3 data-zh="机器人打招呼的展厅">로봇이 인사하는 전시장</h3>
+          <p data-zh="人形机器人与四足机器人就在眼前。机器人会打招呼、会跳舞，机械臂冲的咖啡和冰淇淋也可以尝一尝。">사람을 닮은 로봇과 네 발로 걷는 로봇이 눈앞에 있습니다. 로봇이 인사하고 춤을 추고, 로봇 팔이 내려 준 커피와 아이스크림을 맛봅니다.</p>
+        </figure>
+        <figure>
+          <img src="p-store.jpg" width="1080" height="720" alt="AI 제품 체험 매장의 전시 복도" loading="lazy">
+          <div class="of" data-zh="日常中的 AI">생활 속 AI</div>
+          <h3 data-zh="AI 产品体验商店">AI 제품을 만져 보는 상점</h3>
+          <p data-zh="约 2,000㎡ 的空间里，100 多个品牌、500 多种 AI 产品分成六个区域。健康、智能眼镜、与机器人对话，一个一个试过来。">약 2,000㎡ 공간에 100여 개 브랜드, 500여 종의 AI 제품이 여섯 구역으로 나뉘어 있습니다. 헬스케어, 스마트 글래스, 로봇과의 대화를 하나씩 해 봅니다.</p>
+        </figure>
+        <figure>
+          <img src="p-kit.jpg" width="900" height="709" alt="조립해서 완성한 음성 로봇 교구" loading="lazy">
+          <div class="of" data-zh="亲手做">직접 만들기</div>
+          <h3 data-zh="自己组装的语音机器人">내가 만든 음성 로봇</h3>
+          <p data-zh="先学原理，再动手组装。做好的机器人带回家。">어떻게 움직이는지 배우고 부품을 하나씩 맞춥니다. 완성한 로봇은 집으로 가져갑니다.</p>
+        </figure>
+        <figure>
+          <img src="p-bus.jpg" width="830" height="470" alt="운전석이 없는 자율주행 버스" loading="lazy">
+          <div class="of" data-zh="自动驾驶 · 无人机">자율주행 · 드론</div>
+          <h3 data-zh="没有驾驶座的巴士，送货的无人机">운전석 없는 버스, 배달하는 드론</h3>
+          <p data-zh="在自动驾驶示范区看无人巴士行驶，还可以亲自下单，用无人机把饮料送到手上。">무인 버스가 다니는 자율주행 시범 구역을 봅니다. 직접 주문한 음료를 드론이 내려 주는 것도 받아 봅니다.</p>
+        </figure>
+        <figure>
+          <img src="p-arm.jpg" width="660" height="495" alt="물류 작업을 하는 산업용 휴머노이드" loading="lazy">
+          <div class="of" data-zh="机器人企业">로봇 기업</div>
+          <h3 data-zh="机器人在工作的总部">로봇이 일하고 있는 본사</h3>
+          <p data-zh="在人形机器人企业的总部，看机器人做物流与制造的动作，听工程师讲它由什么零件、什么技术组成。">휴머노이드를 만드는 기업의 본사에서 로봇이 물건을 나르고 조립하는 모습을 봅니다. 어떤 부품과 기술로 되어 있는지 설명을 듣습니다.</p>
+        </figure>
+        <figure>
+          <img src="p-museum.jpg" width="1024" height="682" alt="상하이 과학기술관 전경" loading="lazy">
+          <div class="of" data-zh="上海科技馆">상하이 과학기술관</div>
+          <h3 data-zh="能动手的科学馆">손으로 하는 과학관</h3>
+          <p data-zh="挑重点看。体验互动展项，看机器人表演，和人形机器人打个招呼。">넓어서 전부는 못 봅니다. 중요한 곳을 골라 손으로 해 보는 전시를 체험하고, 로봇 공연을 봅니다.</p>
+        </figure>
+        <figure>
+          <img src="p-shelf.jpg" width="750" height="562" alt="로봇 제품이 진열된 매장" loading="lazy">
+          <div class="of" data-zh="机器人经营的门店">로봇이 운영하는 매장</div>
+          <h3 data-zh="机器人做冰淇淋的地方">로봇이 아이스크림을 만드는 가게</h3>
+          <p data-zh="机器人做的冰淇淋，机器人照看的电子产品卖场。技术已经成为生意的地方。">로봇이 만들어 주는 아이스크림을 먹고, 로봇이 지키는 전자제품 매장을 돌아봅니다. 기술이 이미 장사가 된 자리입니다.</p>
+        </figure>
+        <figure>
+          <img src="p-show.jpg" width="960" height="720" alt="쇼룸에 서 있는 휴머노이드 로봇" loading="lazy">
+          <div class="of" data-zh="亚洲首店">아시아 첫 매장</div>
+          <h3 data-zh="对机器人说话">로봇에게 말을 걸어 봅니다</h3>
+          <p data-zh="在亚洲第一家机器人旗舰店，看人形机器人与机械狗，用语音下指令试试看。">로봇 플래그십 매장의 아시아 1호점입니다. 사람을 닮은 로봇과 기계 강아지를 보고, 목소리로 명령을 내려 봅니다.</p>
+        </figure>
+      </div>
+      <div class="band">
+        <img src="p-town.jpg" width="1080" height="720" alt="AI 혁신 타운 건물" loading="lazy">
+        <img src="p-dog.jpg" width="346" height="231" alt="잔디밭을 걷는 사족 보행 로봇" loading="lazy">
+        <img src="p-three.jpg" width="750" height="506" alt="나란히 선 휴머노이드 로봇 세 대" loading="lazy">
+        <img src="p-parts.jpg" width="1200" height="900" alt="휴머노이드 로봇의 부품 구성도" loading="lazy">
+      </div>
+      <p class="fine" data-zh="照片为当地合作方提供的实地照片。参访地点与顺序可能因当地情况而变动，具体场所与地址在参加确认后另行告知。">사진은 현지 파트너가 제공한 현장 사진입니다. 방문지와 순서는 현지 상황에 따라 바뀔 수 있으며, 구체적인 장소와 주소는 참가 확정 뒤에 안내해 드립니다.</p>
     </div>
   </div>
 </section>
 
 <section class="sec" id="reason">
   <div class="row">
-    <div class="label"><b>06</b><span data-zh="为什么是上海">왜 상하이</span></div>
+    <div class="label"><b>07</b><span data-zh="为什么是上海">왜 상하이</span></div>
     <div>
       <h2><span data-zh="为什么是上海？">왜 상하이일까요?</span></h2>
-      <p class="lead" data-zh="第一届营地选在上海。在这座城市，AI 已经走出展馆，在街道和工厂里工作。">첫 번째 캠프를 상하이에서 엽니다. AI가 전시장을 나와 거리와 공장에서 일하고 있는 도시입니다.</p>
+      <p class="lead" data-zh="第一届营地选在上海。在这座城市，AI 已经走出展馆，在街道和工厂里工作。技术在这里不只是被制造，而是被摆到顾客面前——品牌的旗舰店和企业总部都聚在这里。">첫 번째 캠프를 상하이에서 엽니다. AI가 전시장을 나와 거리와 공장에서 일하고 있는 도시입니다. 이곳에서 기술은 만들어지는 데서 끝나지 않고 손님 앞에 놓입니다. 브랜드의 플래그십 매장과 기업 본사가 모여 있기 때문입니다.</p>
       <div class="nums">
         <div><b>1,100+</b><p data-zh="2026 年 7 月上海世界人工智能大会(WAIC)参展企业数。展品 3000 余件，其中 300 余件为全球首发。">2026년 7월 상하이 세계인공지능대회(WAIC) 참가 기업. 전시 3,000여 건 가운데 300여 건이 세계 첫 공개였습니다.</p></div>
         <div><b data-zh="6370亿元">6,370억 위안</b><p data-zh="2025 年上海人工智能产业规模(规上企业 394 家)，同比增长 39.5%。">2025년 상하이 AI 산업 생산액(일정 규모 이상 기업 394곳). 한 해 전보다 39.5% 늘었습니다.</p></div>
@@ -430,7 +527,7 @@ html[lang="zh-CN"] h1,html[lang="zh-CN"] h2,html[lang="zh-CN"] .cols h3,html[lan
 
 <section class="sec" id="people">
   <div class="row">
-    <div class="label"><b>07</b><span data-zh="导师团队">강사진</span></div>
+    <div class="label"><b>08</b><span data-zh="导师团队">강사진</span></div>
     <div>
       <h2><span data-zh="读懂技术的人，">기술을 읽는 사람,</span><span data-zh="读懂人心的人。">마음을 읽는 사람.</span></h2>
       <p class="lead" data-zh="김덕진 讲解技术，임한나 引导孩子把感受说出来。两人交汇之处，就是最后一天的作品。">김덕진이 기술을 풀어 주고, 임한나가 아이의 느낌을 말로 꺼냅니다. 두 사람이 만나는 지점이 마지막 날의 결과물입니다.</p>
@@ -476,9 +573,15 @@ html[lang="zh-CN"] h1,html[lang="zh-CN"] h2,html[lang="zh-CN"] .cols h3,html[lan
 
 <section class="sec" id="include">
   <div class="row">
-    <div class="label"><b>08</b><span data-zh="包含与准备">포함 · 준비</span></div>
+    <div class="label"><b>09</b><span data-zh="包含与准备">포함 · 준비</span></div>
     <div>
       <h2><span data-zh="包含什么，">무엇이 포함되고,</span><span data-zh="需要准备什么？">무엇을 준비하나요?</span></h2>
+      <div class="price">
+        <div><div class="k" data-zh="第一轮招募 · 先到先得 15 个家庭<span>监护人 1 名 + 孩子 1 名为准</span>">1차 모집 · 선착순 15가족<span>보호자 1명 + 자녀 1명 기준</span></div><div class="v" data-zh="450 万韩元 / 家庭">450만 원 / 가정</div></div>
+        <div><div class="k" data-zh="第一轮结束后<span>监护人 1 名 + 孩子 1 名为准</span>">1차 마감 이후<span>보호자 1명 + 자녀 1명 기준</span></div><div class="v" data-zh="500 万韩元 / 家庭">500만 원 / 가정</div></div>
+        <div><div class="k" data-zh="每增加 1 名孩子">자녀 1명 추가</div><div class="v sm" data-zh="250 万韩元">250만 원</div></div>
+        <div><div class="k" data-zh="每增加 1 名监护人">보호자 1명 추가</div><div class="v sm" data-zh="200 万韩元">200만 원</div></div>
+      </div>
       <div class="cols">
         <div>
           <h3 data-zh="营地包含">캠프에 포함</h3>
@@ -499,7 +602,6 @@ html[lang="zh-CN"] h1,html[lang="zh-CN"] h2,html[lang="zh-CN"] .cols h3,html[lan
         <div>
           <h3 data-zh="另行通知">추후 안내</h3>
           <ul>
-            <li data-zh="费用">참가비</li>
             <li data-zh="具体日程与参访地点">세부 일정과 방문지</li>
             <li data-zh="携带物品（可能需要笔记本电脑或平板）">준비물 (노트북이나 태블릿이 필요할 수 있습니다)</li>
             <li data-zh="旅行保险、入境要求">여행자 보험, 입국 요건</li>
@@ -510,6 +612,7 @@ html[lang="zh-CN"] h1,html[lang="zh-CN"] h2,html[lang="zh-CN"] .cols h3,html[lan
         <p data-zh="营地负责活动时间内的行程与交通。">캠프는 프로그램 시간 동안의 일정과 이동을 운영합니다.</p>
         <p data-zh="机票与住宿由各家庭自行准备。">항공과 숙박은 각 가정에서 준비합니다.</p>
         <p data-zh="韩国公民免签入境政策目前公布至 2026 年 12 月 31 日。2027 年 1 月的入境要求一经确定即行通知，请在收到通知后再准备签证与机票。">한국인 무비자 입국 정책은 2026년 12월 31일까지 발표되어 있습니다. 2027년 1월 기준 입국 요건은 확정되는 대로 안내하며, 안내를 받으신 뒤 비자와 항공권을 준비해 주세요.</p>
+        <p data-zh="日程与内容可能因当地情况而变动。">일정과 내용은 현지 상황에 따라 변경될 수 있습니다.</p>
       </div>
     </div>
   </div>
@@ -517,7 +620,7 @@ html[lang="zh-CN"] h1,html[lang="zh-CN"] h2,html[lang="zh-CN"] .cols h3,html[lan
 
 <section class="sec" id="faq">
   <div class="row">
-    <div class="label"><b>09</b><span data-zh="常见问题">자주 묻는 질문</span></div>
+    <div class="label"><b>10</b><span data-zh="常见问题">자주 묻는 질문</span></div>
     <div>
       <h2><span data-zh="还想了解什么？">무엇이 궁금하신가요?</span></h2>
       <div class="faq">
@@ -526,7 +629,9 @@ html[lang="zh-CN"] h1,html[lang="zh-CN"] h2,html[lang="zh-CN"] .cols h3,html[lan
         <details><summary data-zh="机票和酒店怎么安排？">항공권과 호텔은 어떻게 하나요?</summary><p data-zh="由各家庭自行准备。请在收到确认通知后再预订机票。">각 가정에서 준비합니다. 항공권은 확정 안내를 받은 뒤 예매해 주세요.</p></details>
         <details><summary data-zh="包含餐食和交通吗？">식사와 이동은 포함인가요?</summary><p data-zh="包含行程中的餐食与当地交通。具体范围将在确认参加时通知。">일정 중 식사와 현지 이동이 포함됩니다. 세부 범위는 참가 확정 때 안내합니다.</p></details>
         <details><summary data-zh="孩子需要带什么？">아이가 준비할 것이 있나요?</summary><p data-zh="尚未确定，可能需要笔记本电脑或平板。确定后另行通知。">아직 정해지지 않았습니다. 노트북이나 태블릿이 필요할 수 있으며, 확정되는 대로 안내합니다.</p></details>
-        <details><summary data-zh="费用是多少？">참가비는 얼마인가요?</summary><p data-zh="确定后与参加确认通知一同告知。提交报名表本身不产生任何费用。">확정되는 대로 참가 확정 안내와 함께 알려 드립니다. 신청서를 보내는 것만으로는 비용이 발생하지 않습니다.</p></details>
+        <details><summary data-zh="费用是多少？">참가비는 얼마인가요?</summary><p data-zh="第一轮招募的 15 个家庭为每家庭 450 万韩元，之后为 500 万韩元。以监护人 1 名 + 孩子 1 名为准，每增加 1 名孩子 250 万韩元、1 名监护人 200 万韩元。机票与酒店不包含在内。提交报名表本身不产生任何费用。">1차 모집 선착순 15가족은 가정당 450만 원, 그 뒤로는 500만 원입니다. 보호자 1명과 자녀 1명 기준이고, 자녀가 더 가면 1명당 250만 원, 보호자가 더 가면 1명당 200만 원이 더해집니다. 항공권과 호텔은 포함되지 않습니다. 신청서를 보내는 것만으로는 비용이 발생하지 않습니다.</p></details>
+        <details><summary data-zh="最后一天做什么？">마지막 날은 무엇을 하나요?</summary><p data-zh="第 4 天是自由时间。各家庭自行安排，下午搭机返回。出行方式等基本信息会提前告知。">4일차는 자유 시간입니다. 가족끼리 시간을 보내시고 오후 비행기로 돌아옵니다. 이동 방법 같은 기본 안내는 미리 드립니다.</p></details>
+        <details><summary data-zh="会去哪些地方？">어디를 가나요?</summary><p data-zh="机器人展厅、AI 产品体验商店、自动驾驶示范区、科技馆、机器人企业总部与机器人经营的门店。具体场所与地址在参加确认后另行告知，并可能因当地情况而变动。">로봇 전시장, AI 제품 체험 상점, 자율주행 시범 구역, 과학기술관, 로봇 기업 본사, 로봇이 운영하는 매장을 돕니다. 구체적인 장소와 주소는 참가 확정 뒤에 안내해 드리며, 현지 상황에 따라 바뀔 수 있습니다.</p></details>
         <details><summary data-zh="报名之后会怎样？">신청하면 어떻게 되나요?</summary><p data-zh="负责人确认后与您联系。费用与具体日程确定后，会连同参加确认一并通知。只提交报名表并不代表名额已确定。">담당자가 확인한 뒤 연락드립니다. 참가비와 세부 일정이 확정되면 참가 확정 안내와 함께 알려 드립니다. 신청서를 보내는 것만으로 참가가 확정되지는 않습니다.</p></details>
         <details><summary data-zh="孩子的年龄有上限吗？">아이 나이에 상한이 있나요?</summary><p data-zh="7 岁以上即可参加，没有另设上限。兄弟姐妹同行也可以。如果孩子年龄偏大或偏小，请在报名表的备注里写明，我们会另行沟通。">7세 이상이면 참가할 수 있고 상한은 따로 두지 않았습니다. 형제자매가 함께 와도 됩니다. 자녀의 나이가 많거나 적어 따로 상의가 필요하시면 신청서의 요청 사항에 적어 주세요.</p></details>
         <details><summary data-zh="酒店该订在哪里？">호텔은 어디에 잡아야 하나요?</summary><p data-zh="推荐酒店与集合地点将在参访地点确定后通知。请在收到通知后再预订。">권장 호텔과 집결 장소는 방문지가 확정된 뒤 안내합니다. 안내를 받으신 뒤 예약해 주세요.</p></details>
@@ -540,15 +645,15 @@ html[lang="zh-CN"] h1,html[lang="zh-CN"] h2,html[lang="zh-CN"] .cols h3,html[lan
 
 <section class="sec" id="apply">
   <div class="row">
-    <div class="label"><b>10</b><span data-zh="报名">신청</span></div>
+    <div class="label"><b>11</b><span data-zh="报名">신청</span></div>
     <div>
       <h2><span data-zh="想一起去吗？">함께 가시겠어요?</span></h2>
       <p class="lead" data-zh="由监护人和孩子一起报名。提交后，负责人确认并发送参加确认与详细说明。">보호자와 자녀가 함께 신청합니다. 신청서를 보내 주시면 담당자가 확인한 뒤 참가 확정과 세부 안내를 드립니다.</p>
       <ul class="note">
         <li data-zh="只提交报名表并不代表名额已确定，也不会产生任何费用。">신청서를 보내는 것만으로는 참가가 확정되지 않고, 비용도 발생하지 않습니다.</li>
-        <li data-zh="费用与具体日程确定后，会连同参加确认一并通知。">참가비와 세부 일정은 확정되는 대로 참가 확정 안내와 함께 알려 드립니다.</li>
+        <li data-zh="第一轮招募为先到先得 15 个家庭，每家庭 450 万韩元；之后为 500 万韩元。">1차 모집은 선착순 15가족, 가정당 450만 원입니다. 1차가 마감되면 500만 원입니다.</li>
+        <li data-zh="具体日程确定后，会连同参加确认一并通知。">세부 일정은 확정되는 대로 참가 확정 안내와 함께 알려 드립니다.</li>
         <li data-zh="在参加确认之前，随时可以取消。">참가 확정 전까지는 언제든 취소하실 수 있습니다.</li>
-        <li data-zh="名额为先到先得的 15 个家庭。满额后可登记候补。">정원은 선착순 15가족이며, 마감된 뒤에는 대기로 접수해 드립니다.</li>
         <li data-zh="请在收到确认通知后再预订机票与酒店。">항공권과 호텔은 확정 안내를 받으신 뒤 예약해 주세요.</li>
       </ul>
 
@@ -652,7 +757,7 @@ html[lang="zh-CN"] h1,html[lang="zh-CN"] h2,html[lang="zh-CN"] .cols h3,html[lan
 
 <section class="sec" id="contact">
   <div class="row">
-    <div class="label"><b>11</b><span data-zh="联系">문의</span></div>
+    <div class="label"><b>12</b><span data-zh="联系">문의</span></div>
     <div class="contact">
       <div>
         <div class="where" data-zh="韩国">한국</div>
