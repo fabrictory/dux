@@ -126,6 +126,14 @@ h2.q{font-size:clamp(28px,3.9vw,50px)}
 .pix img{width:100%;aspect-ratio:4/3;object-fit:cover;display:block;background:#E8EBF2}
 .pix figcaption{margin-top:8px;font-size:13px;font-weight:500;color:var(--muted);line-height:1.4}
 .only{margin-top:26px;font-size:17px;font-weight:500;max-width:720px;padding-left:16px;border-left:2px solid var(--accent)}
+.course li b{font-weight:700}
+.course li.wrap{margin-top:12px;padding-left:18px;font-size:16px;font-weight:500;color:var(--accent)}
+.course li.wrap::before{background:transparent}
+.priv{margin-top:40px;border:1px solid var(--line);padding:34px 34px 36px;background:linear-gradient(180deg,#F4F6FA 0%,#FBFCFE 100%)}
+.priv h3{margin:0;font-size:28px;letter-spacing:-.04em}
+.priv>div{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:28px 32px;margin-top:26px}
+.priv b{display:block;font-size:18px;font-weight:700;letter-spacing:-.02em}
+.priv p{font-size:15px;font-weight:300;margin-top:8px;line-height:1.6}
 .vs{display:grid;grid-template-columns:1fr 1fr;gap:0 32px;margin-top:44px}
 .vs>div{border-top:1px solid var(--line);padding-top:18px}
 .vs>div.on{border-top-color:var(--ink)}
@@ -260,6 +268,8 @@ footer .brand{color:var(--ink)}
   .pix{grid-template-columns:1fr 1fr}
   .vs{grid-template-columns:1fr;gap:24px}
   .dh b{font-size:26px}
+  .priv{padding:26px 20px 28px}
+  .priv h3{font-size:24px}
   .price .v{font-size:22px}
   .axa{grid-template-columns:1fr;gap:10px 0;padding:28px 0}
   .axa .x{padding-top:0;text-align:center}
@@ -352,7 +362,7 @@ html[lang="zh-CN"] h1,html[lang="zh-CN"] h2,html[lang="zh-CN"] .cols h3,html[lan
     <div class="label"><b>02</b><span data-zh="营地概览">캠프 개요</span></div>
     <div>
       <h2><span data-zh="2027年1月27—30日，">2027년 1월 27–30일,</span><span data-zh="上海。">상하이.</span></h2>
-      <p class="lead" data-zh="父母和孩子看同一个现场，交流同一个问题。7 岁以上的孩子与监护人一同参加，第一轮招募 15 个家庭。">부모와 아이가 같은 현장을 보고 같은 질문을 나눕니다. 7세 이상 자녀와 보호자가 함께 참가하고, 1차 모집은 선착순 15가족입니다.</p>
+      <p class="lead" data-zh="15 个家庭一起走，不与别的团混编。父母和孩子看同一个现场，交流同一个问题。7 岁以上的孩子与监护人一同参加。">15가족만 함께 다니는 프라이빗 캠프입니다. 부모와 아이가 같은 현장을 보고 같은 질문을 나눕니다. 7세 이상 자녀와 보호자가 함께 참가합니다.</p>
       <dl class="spec">
         <div><dt data-zh="营名">캠프명</dt><dd data-zh="第1届 DUX 未来学院 AI 洞察营">제1회 덕스 미래 아카데미 AI 인사이트 캠프</dd></div>
         <div><dt data-zh="日期">일정</dt><dd data-zh="2027.1.27(周三)–30(周六)，4天3晚">2027. 1. 27(수) – 30(토), 3박 4일</dd></div>
@@ -449,13 +459,13 @@ html[lang="zh-CN"] h1,html[lang="zh-CN"] h2,html[lang="zh-CN"] .cols h3,html[lan
           <ul>
             <li data-zh="午后抵达上海，入住酒店">오후 상하이 도착, 호텔 체크인</li>
             <li data-zh="开营说明与分组见面">오리엔테이션과 조별 인사</li>
-            <li data-zh="开营讲座〈为什么是上海〉—— 김덕진">여는 강의 「왜 상하이인가」 · 김덕진</li>
+            <li data-zh="开营讲座 —— 김덕진 · 임한나">여는 강의 · 김덕진, 임한나</li>
             <li data-zh="一起用晚餐">함께 저녁</li>
           </ul>
         </article>
 
         <article>
-          <div class="dh"><b data-zh="第 2 天">2일차</b><span data-zh="1 月 28 日 · 로봇을 만나는 날">1월 28일 · 로봇을 만나는 날</span></div>
+          <div class="dh"><b data-zh="第 2 天">2일차</b><span data-zh="1 月 28 日 · 机器人在工作的一天">1월 28일 · 로봇이 일하는 하루</span></div>
           <div class="pix">
             <figure><img src="p-hall.jpg" width="1080" height="565" alt="휴머노이드 로봇이 늘어선 전시장" loading="lazy"><figcaption data-zh="人形机器人展厅">휴머노이드 로봇 전시장</figcaption></figure>
             <figure><img src="p-store.jpg" width="1080" height="720" alt="AI 제품 체험 매장의 전시 복도" loading="lazy"><figcaption data-zh="AI 体验商店">AI 체험 매장</figcaption></figure>
@@ -463,15 +473,16 @@ html[lang="zh-CN"] h1,html[lang="zh-CN"] h2,html[lang="zh-CN"] .cols h3,html[lan
             <figure><img src="p-bus.jpg" width="830" height="470" alt="운전석이 없는 자율주행 버스" loading="lazy"><figcaption data-zh="自动驾驶 · 无人机">자율주행 · 드론</figcaption></figure>
           </div>
           <ul>
-            <li data-zh="人形机器人展厅 —— 机器人打招呼、跳舞，尝一尝机械臂冲的咖啡与冰淇淋">휴머노이드 로봇 전시장 — 로봇이 인사하고 춤을 춥니다. 로봇 팔이 내려 준 커피와 아이스크림을 맛봅니다</li>
-            <li data-zh="AI 体验商店 —— 约 2,000㎡，100 多个品牌、500 多种 AI 产品，分六个区域亲手体验">AI 체험 매장 — 약 2,000㎡에 100여 개 브랜드, 500여 종의 AI 제품을 여섯 구역에서 직접 만져 봅니다</li>
-            <li data-zh="机器人制作工作坊 —— 学原理，动手组装，做好的语音机器人带回家">로봇 만들기 워크숍 — 원리를 배우고 조립해, 완성한 음성 로봇을 집으로 가져갑니다</li>
-            <li data-zh="自动驾驶 · 无人机 —— 看无人巴士行驶，亲自下单，用无人机把饮料送到手上">자율주행 · 드론 — 무인 버스가 다니는 구간을 보고, 직접 주문한 음료를 드론으로 받습니다</li>
+            <li data-zh="人形机器人孵化器 —— 需提前登记才能进入的空间。机器人迎宾与表演，人形与四足机器人近在眼前，还能尝一尝机械臂冲的咖啡与冰淇淋"><b>휴머노이드 로봇 인큐베이터</b> — 사전 등록을 거쳐 들어가는 공간입니다. 로봇의 환영 인사와 공연을 보고, 사람을 닮은 로봇과 네 발로 걷는 로봇을 가까이서 봅니다. 로봇 팔이 내려 준 커피와 아이스크림도 맛봅니다</li>
+            <li data-zh="AI 体验商店 —— 约 2,000㎡，100 多个品牌、500 多种 AI 产品，分六个区域。不是看，是一件件上手"><b>AI 체험 매장</b> — 약 2,000㎡에 100여 개 브랜드, 500여 종의 AI 제품이 여섯 구역에 있습니다. 눈으로 보는 것이 아니라 하나씩 손에 쥐어 봅니다</li>
+            <li data-zh="机器人制作工作坊 —— 在创客空间里学原理、动手组装。做好的语音机器人带回家"><b>로봇 만들기 워크숍</b> — 메이커 공간에서 원리를 배우고 직접 조립합니다. 완성한 음성 로봇은 집으로 가져갑니다</li>
+            <li data-zh="自动驾驶 · 无人机 —— 在示范区看无人巴士行驶，并亲自下单，用无人机把饮料送到手上"><b>자율주행 · 드론</b> — 시범 구역에서 무인 버스가 달리는 것을 보고, 직접 주문한 음료를 드론으로 받아 봅니다</li>
+            <li class="wrap" data-zh="每一段结束后，김덕진 所长当场讲解刚看到的技术。">코스가 끝날 때마다 김덕진 소장이 방금 본 기술을 그 자리에서 풀어 줍니다</li>
           </ul>
         </article>
 
         <article>
-          <div class="dh"><b data-zh="第 3 天">3일차</b><span data-zh="1 月 29 日 · 기술이 일하는 곳">1월 29일 · 기술이 일하는 곳</span></div>
+          <div class="dh"><b data-zh="第 3 天">3일차</b><span data-zh="1 月 29 日 · 技术成为生意的一天">1월 29일 · 기술이 장사가 되는 하루</span></div>
           <div class="pix">
             <figure><img src="p-museum.jpg" width="1024" height="682" alt="상하이 과학기술관 전경" loading="lazy"><figcaption data-zh="上海科技馆">상하이 과학기술관</figcaption></figure>
             <figure><img src="p-arm.jpg" width="660" height="495" alt="물류 작업을 하는 산업용 휴머노이드" loading="lazy"><figcaption data-zh="机器人企业参访">로봇 기업 방문</figcaption></figure>
@@ -479,10 +490,11 @@ html[lang="zh-CN"] h1,html[lang="zh-CN"] h2,html[lang="zh-CN"] .cols h3,html[lan
             <figure><img src="p-show.jpg" width="960" height="720" alt="쇼룸에 서 있는 휴머노이드 로봇" loading="lazy"><figcaption data-zh="机器人旗舰店（亚洲首店）">로봇 플래그십 매장 · 아시아 1호</figcaption></figure>
           </div>
           <ul>
-            <li data-zh="上海科技馆 —— 挑重点看，体验互动展项，看机器人表演">상하이 과학기술관 — 중요한 곳을 골라 손으로 하는 전시를 체험하고 로봇 공연을 봅니다</li>
-            <li data-zh="机器人企业参访 —— 看工业用人形机器人做物流与制造，听工程师讲零件与核心技术">로봇 기업 방문 — 산업용 휴머노이드가 물류와 제조 작업을 하는 모습을 보고, 부품과 핵심 기술 설명을 듣습니다</li>
-            <li data-zh="机器人经营的门店 —— 机器人做的冰淇淋，机器人照看的电子产品卖场">로봇 운영 매장 — 로봇이 만든 아이스크림을 먹고, 로봇이 지키는 전자제품 매장을 돌아봅니다</li>
-            <li data-zh="机器人旗舰店 —— 亚洲首店。看人形机器人与机械狗，用语音下指令">로봇 플래그십 매장 — 아시아 1호점입니다. 휴머노이드와 기계 강아지를 보고 목소리로 명령을 내려 봅니다</li>
+            <li data-zh="上海科技馆 —— 挑重点看。体验互动展项，看机器人表演"><b>상하이 과학기술관</b> — 넓어서 전부는 못 봅니다. 중요한 곳을 골라 손으로 하는 전시를 체험하고 로봇 공연을 봅니다</li>
+            <li data-zh="机器人企业参访 —— 人形机器人企业的总部。看工业用人形机器人做物流与制造，并直接听工程师讲它由什么零件、什么技术组成。这不是展厅，是他们工作的地方"><b>로봇 기업 방문</b> — 휴머노이드를 만드는 기업의 본사입니다. 산업용 로봇이 물건을 나르고 조립하는 작업을 보고, 어떤 부품과 기술로 되어 있는지 현장 엔지니어에게 직접 듣습니다. 전시관이 아니라 그들이 일하는 자리입니다</li>
+            <li data-zh="机器人经营的门店 —— 机器人现做的冰淇淋，机器人照看的电子产品卖场。技术已经成为生意的地方"><b>로봇 운영 매장</b> — 로봇이 그 자리에서 만들어 주는 아이스크림을 먹고, 로봇이 지키는 전자제품 매장을 돌아봅니다. 기술이 이미 장사가 된 자리입니다</li>
+            <li data-zh="机器人旗舰店 —— 亚洲首店。看人形机器人与机械狗，亲自用语音下指令"><b>로봇 플래그십 매장</b> — 아시아 1호점입니다. 휴머노이드와 기계 강아지를 보고, 아이가 직접 목소리로 명령을 내려 봅니다</li>
+            <li class="wrap" data-zh="一天结束时，임한나 代表带大家把看到的变成自己的话，和父母一起整理。">하루를 마치며 임한나 대표가 본 것을 자기 말로 바꾸는 시간을 이끕니다. 부모와 함께 정리합니다</li>
           </ul>
         </article>
 
@@ -496,7 +508,15 @@ html[lang="zh-CN"] h1,html[lang="zh-CN"] h2,html[lang="zh-CN"] .cols h3,html[lan
         </article>
       </div>
 
-      <p class="only" data-zh="企业总部与非公开空间需提前登记才能进入，不是个人找上门就能参观的地方。这份行程由当地合作方直接接洽而成。">기업 본사와 비공개 공간은 사전 등록을 거쳐 들어갑니다. 개인이 찾아가서 볼 수 있는 곳이 아닙니다. 이 코스는 현지 파트너가 직접 섭외했습니다.</p>
+      <div class="priv">
+        <h3 data-zh="这是一条只属于 15 个家庭的路线">15가족만 다니는 길입니다</h3>
+        <div>
+          <div><b data-zh="走进展厅之后">쇼룸 너머로</b><p data-zh="企业总部与非公开空间需提前登记才能进入。以个人身份找上门，多半只能停在展厅前。">기업 본사와 비공개 공간은 사전 등록을 거쳐 들어갑니다. 개인이 찾아가면 대개 쇼룸 앞에서 멈춥니다.</p></div>
+          <div><b data-zh="15 个家庭，一辆车">15가족, 한 대의 차</b><p data-zh="不和别的团混在一起。整个行程只有这 15 个家庭一起移动。">다른 팀과 섞이지 않습니다. 이 15가족만 함께 움직입니다.</p></div>
+          <div><b data-zh="每一段都有人讲">코스마다 사람이 붙습니다</b><p data-zh="每看完一处，김덕진 讲技术，임한나 带着把感受说出来。不是让孩子自己看完就走。">한 곳을 볼 때마다 김덕진이 기술을 풀고, 임한나가 느낀 것을 꺼내게 합니다. 아이 혼자 보고 지나가지 않습니다.</p></div>
+          <div><b data-zh="当地直接接洽">현지가 직접 섭외</b><p data-zh="这份行程由在上海工作了 25 年的当地合作方直接接洽而成，不是买来的现成产品。">상하이에서 25년 일한 현지 파트너가 직접 섭외한 코스입니다. 사 온 상품이 아닙니다.</p></div>
+        </div>
+      </div>
 
       <p class="lead" style="margin-top:56px" data-zh="两天的现场，学习按 SEE · FEEL · MAKE 的顺序展开。">이틀의 현장에서 배움은 SEE · FEEL · MAKE의 순서로 이어집니다.</p>
       <div class="steps">
