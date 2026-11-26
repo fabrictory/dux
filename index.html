@@ -320,10 +320,30 @@ footer .brand{color:var(--ink)}
 @font-face{font-family:"NotoSC";font-style:normal;font-weight:700 900;font-display:swap;src:url(fonts/sc900.woff2) format("woff2")}
 h1,h2,.person h3,.step h3,.cols h3,.spec dd,.faq summary,.fs h3,.done h3,.axa strong,.pair strong,.facts dd,.strip .txt strong,.contact strong{font-family:"Pretendard","NotoSC",sans-serif;font-weight:800;letter-spacing:-.04em}
 html[lang="zh-CN"] h1,html[lang="zh-CN"] h2,html[lang="zh-CN"] .cols h3,html[lang="zh-CN"] .spec dd,html[lang="zh-CN"] .faq summary,html[lang="zh-CN"] .person h3,html[lang="zh-CN"] .step h3,html[lang="zh-CN"] .fs h3,html[lang="zh-CN"] .done h3,html[lang="zh-CN"] .axa strong,html[lang="zh-CN"] .pair strong,html[lang="zh-CN"] .facts dd,html[lang="zh-CN"] .strip .txt strong,html[lang="zh-CN"] .contact strong{font-family:"NotoSC","Pretendard",sans-serif;font-weight:900;letter-spacing:-.02em}
+.topbar{position:sticky;top:0;z-index:60;display:flex;flex-wrap:wrap;align-items:center;gap:8px 18px;justify-content:center;background:var(--ink);color:#fff;padding:9px 20px;font-size:14px;font-weight:500;letter-spacing:-.01em}
+.topbar .tb-d{color:#A9BAFF;font-weight:700}
+.tb-c{color:#fff;border:1px solid rgba(255,255,255,.45);padding:4px 13px;text-decoration:none;font-weight:700}
+.tb-c:hover{background:#fff;color:var(--ink)}
+.herofacts{list-style:none;display:flex;flex-wrap:wrap;gap:6px 10px;margin:20px 0 0;padding:0}
+.herofacts li{border:1px solid var(--line);background:rgba(255,255,255,.65);padding:5px 12px;font-size:14px;font-weight:500;letter-spacing:-.01em}
+.glance{padding-top:64px}
+.glance .nums{margin-top:0;border-top:0;padding-top:0}
+.ctaband{padding-top:110px}
+.ctaband>div{border-top:1px solid var(--ink);padding-top:30px}
+.ctaband h2{margin:0}
+.ctaband p{margin-top:12px;font-size:17px;font-weight:300;max-width:60ch}
+.ctaband .tb-c.big{display:inline-block;margin-top:22px;color:var(--ink);border-color:var(--ink);padding:11px 22px;font-size:16px}
+.ctaband .tb-c.big:hover{background:var(--ink);color:#fff}
+@media(max-width:720px){.topbar{font-size:12.5px;gap:6px 12px;padding:8px 14px}.herofacts li{font-size:12.5px}}
 </style>
 </head>
 <body>
 
+<div class="topbar">
+  <span class="tb-a" data-zh="第一届纪念优惠 · 第一轮先到先得 15 个家庭">제1회 기념 할인 · 1차 선착순 15가족</span>
+  <span class="tb-d" id="dday" data-zh="第一轮截止 12 月 15 日">12월 15일 1차 마감</span>
+  <a class="tb-c" href="#apply" data-zh="报名">참가 신청</a>
+</div>
 <header class="hero" id="top">
   <div class="giant" aria-hidden="true">AI×<br>AI</div>
   <div class="shard" aria-hidden="true" style="left:5%;top:150px;width:50%;height:16px;background:linear-gradient(90deg,rgba(255,255,255,0),#F7E0BC 40%,#CFE6FA 75%,#FFFFFF)"></div>
@@ -336,7 +356,7 @@ html[lang="zh-CN"] h1,html[lang="zh-CN"] h2,html[lang="zh-CN"] .cols h3,html[lan
     <div class="brand">DUX FUTURE ACADEMY</div>
     <nav>
       <a href="#tour" data-zh="亲子营">캠프</a>
-      <a href="#whycamp" data-zh="为什么是我们">왜 이 캠프</a>
+      <a href="#who" data-zh="适合谁">대상</a>
       <a href="#flow" data-zh="日程">일정</a>
       <a href="#people" data-zh="导师">강사진</a>
       <a href="#include" data-zh="费用包含">포함 사항</a>
@@ -349,6 +369,12 @@ html[lang="zh-CN"] h1,html[lang="zh-CN"] h2,html[lang="zh-CN"] .cols h3,html[lan
     <div class="kicker" data-zh="人工智能的 AI × 情感智能的 AI">인공지능의 AI × 정서지능의 AI</div>
     <h1><span data-zh="先遇见的未来，">먼저 만나는 미래,</span><span data-zh="长久留存的力量">오래 남는 힘</span></h1>
     <p class="sub" data-zh="一起入门人工智能与情感智能的 4 天 3 晚亲子营">인공지능과 정서지능에 함께 입문하는 3박 4일 캠프</p>
+    <ul class="herofacts">
+      <li data-zh="2027年1月27日—30日 · 4天3晚">2027. 1. 27–30 · 3박 4일</li>
+      <li data-zh="中国上海">중국 상하이</li>
+      <li data-zh="8 岁以上(满 7 周岁)的孩子与监护人">8세 이상(만 7세) 자녀와 보호자</li>
+      <li data-zh="第一轮先到先得 15 个家庭">1차 선착순 15가족</li>
+    </ul>
     <a class="textlink" href="#tour" data-zh="2027年1月27—30日 · 查看上海营 →">2027. 1. 27–30 상하이 캠프 보기 →</a>
   </div>
 </header>
@@ -365,9 +391,37 @@ html[lang="zh-CN"] h1,html[lang="zh-CN"] h2,html[lang="zh-CN"] .cols h3,html[lan
 </section>
 -->
 
+<section class="sec glance" id="glance">
+  <div class="nums">
+    <div><b data-zh="4 天 3 晚">3박 4일</b><p data-zh="2027年1月27日(周三)—30日(周六)">2027. 1. 27(수)–30(토)</p></div>
+    <div><b data-zh="15 个家庭">15가족</b><p data-zh="第一轮先到先得，12 月 15 日截止">1차 선착순 · 12월 15일 마감</p></div>
+    <div><b data-zh="11 处">11곳</b><p data-zh="第 2、3 天的参访地点">2·3일차 방문처</p></div>
+  </div>
+</section>
+
+<section class="sec" id="tour">
+  <div class="row">
+    <div class="label"><b>01</b><span data-zh="亲子营概要">캠프 개요</span></div>
+    <div>
+      <h2><span data-zh="2027年1月27—30日，">2027년 1월 27–30일,</span><span data-zh="上海。">상하이.</span></h2>
+      <p class="lead" data-zh="以小规模精选名额，深入交流 AI 洞察的亲子营。父母和孩子看同一个现场，聊同一个问题。8 岁以上(满 7 周岁)的孩子与监护人一同参加。">소수 정예 인원으로 깊이 있는 AI 인사이트를 나누는 프라이빗 캠프입니다. 부모와 아이가 같은 현장을 보고 같은 질문을 나눕니다. 8세 이상(만 7세) 자녀와 보호자가 함께 참가합니다.</p>
+      <dl class="spec">
+        <div><dt data-zh="亲子营名称">캠프명</dt><dd data-zh="第1届 DUX 未来学院 AI 洞察营">제1회 덕스 미래 아카데미 AI 인사이트 캠프</dd></div>
+        <div><dt data-zh="日期">일정</dt><dd data-zh="2027.1.27(周三)–30(周六)，4天3晚">2027. 1. 27(수) – 30(토), 3박 4일</dd></div>
+        <div><dt data-zh="地点">장소</dt><dd data-zh="中国上海">중국 상하이</dd></div>
+        <div><dt data-zh="对象">대상</dt><dd data-zh="8 岁以上(满 7 周岁)的孩子与监护人">8세 이상(만 7세) 자녀와 보호자</dd></div>
+        <div><dt data-zh="名额">모집</dt><dd data-zh="第一轮 15 个家庭，按报名先后">1차 선착순 15가족</dd></div>
+        <div><dt data-zh="导师">강사</dt><dd>김덕진 · 임한나</dd></div>
+      </dl>
+      <p class="notice" data-zh="日程与内容可能因当地情况而变动。请在收到确认通知后再预订机票。">일정과 내용은 현지 상황에 따라 변경될 수 있습니다. 항공권은 확정 안내를 받은 뒤 예매해 주세요.</p>
+      <p style="margin-top:26px"><a class="textlink" href="#apply" data-zh="报名参加 →">참가 신청하기 →</a></p>
+    </div>
+  </div>
+</section>
+
 <section class="sec" id="why">
   <div class="row">
-    <div class="label"><b>01</b><span data-zh="理念">철학</span></div>
+    <div class="label"><b>02</b><span data-zh="理念">철학</span></div>
     <div>
       <p class="pre" data-zh="现在的孩子，比起键盘更熟悉触屏，将是用语言驾驭 AI 的第一代。">지금의 아이들은 자판보다 터치가 익숙하고 말로 AI를 다루게 될 첫 세대입니다.</p>
       <h2 class="q"><span data-zh="面对技术的变化，">기술의 변화 앞에서,</span><span data-zh="我们该给孩子留下什么？">우린 아이들에게 무엇을 남겨야 할까요?</span></h2>
@@ -395,29 +449,34 @@ html[lang="zh-CN"] h1,html[lang="zh-CN"] h2,html[lang="zh-CN"] .cols h3,html[lan
   </div>
 </section>
 
-<section class="sec" id="tour">
+<section class="sec" id="who">
   <div class="row">
-    <div class="label"><b>02</b><span data-zh="亲子营概览">캠프 개요</span></div>
+    <div class="label"><b>03</b><span data-zh="适合谁">대상</span></div>
     <div>
-      <h2><span data-zh="2027年1月27—30日，">2027년 1월 27–30일,</span><span data-zh="上海。">상하이.</span></h2>
-      <p class="lead" data-zh="以小规模精选名额，深入交流 AI 洞察的亲子营。父母和孩子看同一个现场，聊同一个问题。8 岁以上(满 7 周岁)的孩子与监护人一同参加。">소수 정예 인원으로 깊이 있는 AI 인사이트를 나누는 프라이빗 캠프입니다. 부모와 아이가 같은 현장을 보고 같은 질문을 나눕니다. 8세 이상(만 7세) 자녀와 보호자가 함께 참가합니다.</p>
-      <dl class="spec">
-        <div><dt data-zh="亲子营名称">캠프명</dt><dd data-zh="第1届 DUX 未来学院 AI 洞察营">제1회 덕스 미래 아카데미 AI 인사이트 캠프</dd></div>
-        <div><dt data-zh="日期">일정</dt><dd data-zh="2027.1.27(周三)–30(周六)，4天3晚">2027. 1. 27(수) – 30(토), 3박 4일</dd></div>
-        <div><dt data-zh="地点">장소</dt><dd data-zh="中国上海">중국 상하이</dd></div>
-        <div><dt data-zh="对象">대상</dt><dd data-zh="8 岁以上(满 7 周岁)的孩子与监护人">8세 이상(만 7세) 자녀와 보호자</dd></div>
-        <div><dt data-zh="名额">모집</dt><dd data-zh="第一轮 15 个家庭，按报名先后">1차 선착순 15가족</dd></div>
-        <div><dt data-zh="导师">강사</dt><dd>김덕진 · 임한나</dd></div>
-      </dl>
-      <p class="notice" data-zh="日程与内容可能因当地情况而变动。请在收到确认通知后再预订机票。">일정과 내용은 현지 상황에 따라 변경될 수 있습니다. 항공권은 확정 안내를 받은 뒤 예매해 주세요.</p>
-      <p style="margin-top:26px"><a class="textlink" href="#apply" data-zh="报名参加 →">참가 신청하기 →</a></p>
+      <h2><span data-zh="这个亲子营适合谁？">어떤 가족에게 맞나요?</span></h2>
+      <p class="lead" data-zh="8 岁以上(满 7 周岁)的孩子与监护人一同参加。在以下三种情况下，这趟行程的作用最为明显。">8세 이상(만 7세) 자녀와 보호자가 함께 참가합니다. 아래 세 경우에 이 일정이 가장 크게 작용합니다.</p>
+      <div class="cols">
+        <div>
+          <h3 data-zh="技术只在屏幕里见过的孩子">기술을 화면으로만 본 아이</h3>
+          <p data-zh="机器人与自动驾驶在视频里看得很熟，却没见过它们真正运转的样子。看过实物与只看过影像，理解的深度不同。">로봇과 자율주행을 영상으로는 익숙하게 보지만 실제로 움직이는 것을 본 적은 없는 아이입니다. 실물을 본 경험과 화면으로만 본 경험은 이해의 깊이가 다릅니다.</p>
+        </div>
+        <div>
+          <h3 data-zh="不知道如何和孩子谈 AI 的父母">AI를 어떻게 이야기할지 막막한 부모</h3>
+          <p data-zh="自己已经在用 AI 工具，却不知道该和孩子谈什么、怎么谈。从看同一个现场、问同一个问题开始。">도구는 이미 쓰고 있지만 아이와 무엇을 어떻게 이야기해야 할지 정리되지 않은 경우입니다. 같은 현장을 보고 같은 질문을 나누는 것에서 시작합니다.</p>
+        </div>
+        <div>
+          <h3 data-zh="想和孩子看同一个现场的家庭">아이와 같은 것을 보고 싶은 가족</h3>
+          <p data-zh="这不是只把孩子送去的营。父母全程同行，亲眼看到孩子对什么有反应、在哪里停下脚步。">아이만 보내는 캠프가 아닙니다. 부모가 전 일정을 함께 다니며 아이가 무엇에 반응하고 어디에서 멈춰 서는지 직접 봅니다.</p>
+        </div>
+      </div>
     </div>
   </div>
 </section>
 
+
 <section class="sec" id="whycamp">
   <div class="row">
-    <div class="label"><b>03</b><span data-zh="为什么是这个亲子营">왜 이 캠프</span></div>
+    <div class="label"><b>04</b><span data-zh="为什么是我们">왜 이 캠프</span></div>
     <div>
       <h2><span data-zh="为什么是这个亲子营？">왜 이 캠프일까요?</span></h2>
       <p class="lead" data-zh="对将用语言驾驭 AI 的一代来说，先要有把自己的想法说出来的力量。我们相信这种力量长在亲眼去看、把感受说出来、亲手做出来的时间里。所以这个亲子营按 SEE · FEEL · MAKE 的顺序设计。">말로 AI를 다루게 될 세대에게는 자기 생각을 말로 꺼내는 힘이 먼저 필요합니다. 저희는 그 힘이 직접 보고 느낀 것을 말하고 손으로 만들어 보는 시간 안에서 자란다고 믿습니다. 그래서 이 캠프를 SEE · FEEL · MAKE의 순서로 짰습니다.</p>
@@ -444,48 +503,30 @@ html[lang="zh-CN"] h1,html[lang="zh-CN"] h2,html[lang="zh-CN"] .cols h3,html[lan
   </div>
 </section>
 
-<section class="sec" id="learn">
+<section class="sec" id="reason">
   <div class="row">
-    <div class="label"><b>04</b><span data-zh="收获">배워 오는 것</span></div>
+    <div class="label"><b>05</b><span data-zh="为什么是上海">왜 상하이</span></div>
     <div>
-      <h2><span data-zh="不止于看。">보고 끝나지 않습니다.</span><span data-zh="说出来，做出来，带回家。">말하고 만들어서 돌아옵니다.</span></h2>
-      <p class="lead" data-zh="将用语言驾驭 AI 的一代，需要的是自己的话。这个营从把看到的东西用自己的话说出来开始。AI 已经是孩子在学校里要学的内容，第一步就在现场迈出。">말로 AI를 다루게 될 세대에게 필요한 것은 자기 말입니다. 이 캠프는 본 것을 자기 말로 꺼내는 데서 시작합니다. AI는 이미 학교에서 배우는 내용이고 그 첫걸음을 현장에서 뗍니다.</p>
-      <div class="cols">
-        <div>
-          <div class="of">Artificial Intelligence</div>
-          <h3 data-zh="人工智能">인공지능</h3>
-          <ul>
-            <li data-zh="看机器人，摸机器人，亲手做一个小机器人">로봇을 보고 만져 보고 작은 로봇을 직접 만듭니다</li>
-            <li data-zh="刚看到的技术是什么，当场听 김덕진 所长讲解">방금 본 기술이 무엇인지 김덕진 소장에게 바로 듣습니다</li>
-            <li data-zh="用 AI 把自己的想法做成作品">AI로 자기 생각을 결과물로 만듭니다</li>
-          </ul>
-        </div>
-        <div>
-          <div class="of">Affective Intelligence</div>
-          <h3 data-zh="情感智能">정서지능</h3>
-          <ul>
-            <li data-zh="把看到后的感受用自己的话说出来">본 것에서 느낀 점을 자기 말로 꺼냅니다</li>
-            <li data-zh="和父母互相提问">부모와 질문을 주고받습니다</li>
-            <li data-zh="在大家面前发表自己的想法">사람들 앞에서 자기 생각을 발표합니다</li>
-          </ul>
-        </div>
-        <div>
-          <div class="of">AI × AI</div>
-          <h3 data-zh="带回家的东西">들고 돌아오는 것</h3>
-          <ul>
-            <li data-zh="亲手完成的作品">직접 만든 결과물</li>
-            <li data-zh="结业证书">수료증</li>
-            <li data-zh="亲子营手册">캠프 책자</li>
-          </ul>
-        </div>
-      </div>
+      <h2><span data-zh="为什么是上海？">왜 상하이인가?</span></h2>
+      <p class="lead" data-zh="上海是技术与消费者相遇的城市。企业在内部完成验证的 AI，在这里以门店、服务与交通的形式面向真实客户运营。研发与量产之后的 B2C 商业化阶段，可以在一座城市内完整确认。">상하이는 기술이 소비자와 만나는 도시입니다. 기업이 내부 검증을 마친 AI가 이곳에서 매장과 서비스, 교통의 형태로 실제 고객을 대상으로 운영됩니다. 연구와 생산 다음 단계인 B2C 상업화를 한 도시 안에서 확인할 수 있습니다.</p>
+
+      <div class="keys">
+        <div><b data-zh="B2C 商业化测试场">B2C 상업화 테스트베드</b><p data-zh="已通过企业内部与工厂验证的技术，在这里直接面向消费者运营。孩子看到的不是展品，而是正在营业的服务。">기업 내부와 생산 현장에서 검증을 마친 기술이 소비자를 대상으로 운영되는 단계입니다. 아이가 보는 것은 전시품이 아니라 영업 중인 서비스입니다.</p></div>
+        <div><b data-zh="旗舰店与总部集中">플래그십·본사 집중</b><p data-zh="主要品牌的首店、直营店与企业总部集中于同一座城市，无需跨城移动即可覆盖多个产业领域。">주요 브랜드의 1호점과 직영점, 기업 본사가 한 도시에 모여 있습니다. 도시를 옮기지 않고 여러 산업 분야를 한 번에 다룰 수 있습니다.</p></div>
+              </div>
+
+      <div class="nums">
+        <div><b data-zh="30 万人">30만 명</b><p data-zh="上海的人工智能从业人员，约占中国全国的三分之一。">상하이의 AI 인력 규모. 중국 전체의 약 3분의 1에 해당합니다.</p></div>
+        <div><b data-zh="6,370 亿元">6,370억 위안</b><p data-zh="2025 年上海人工智能产业规模(规上企业 394 家)，同比增长 39.5%。">2025년 상하이 AI 산업 생산액(일정 규모 이상 기업 394곳). 전년 대비 39.5% 증가했습니다.</p></div>
+              </div>
+      <p class="fine" data-zh="资料来源：上海市政府英文网、上海外商投资指南、China Daily、CGTN 报道(2025—2026)。2026 年 7 月上海世界人工智能大会(WAIC)参展企业 1,100 家以上，展品 3,000 余件中 300 余件为全球首发。">출처: 상하이시 정부 영문 사이트, 상하이 외자유치 안내서, China Daily, CGTN 보도(2025–2026). 2026년 7월 상하이 세계인공지능대회(WAIC) 참가 기업은 1,100곳이 넘었고 전시 3,000여 건 가운데 300여 건이 세계 첫 공개였습니다.</p>
     </div>
   </div>
 </section>
 
 <section class="sec" id="flow">
   <div class="row">
-    <div class="label"><b>05</b><span data-zh="日程">일정</span></div>
+    <div class="label"><b>06</b><span data-zh="日程">일정</span></div>
     <div>
       <h2><span data-zh="4 天 3 晚，">3박 4일,</span><span data-zh="一眼看完。">한눈에.</span></h2>
       <p class="lead" data-zh="中间两天走现场，最后一天留给结业与家庭的自由时间。参访地点与顺序可能因当地情况而变动。">가운데 이틀은 현장을 돌고 마지막 날은 수료와 가족의 자유 시간으로 둡니다. 방문지와 순서는 현지 상황에 따라 바뀔 수 있습니다.</p>
@@ -536,30 +577,48 @@ html[lang="zh-CN"] h1,html[lang="zh-CN"] h2,html[lang="zh-CN"] .cols h3,html[lan
   </div>
 </section>
 
-<section class="sec" id="reason">
+<section class="sec" id="learn">
   <div class="row">
-    <div class="label"><b>06</b><span data-zh="为什么是上海">왜 상하이</span></div>
+    <div class="label"><b>07</b><span data-zh="带回什么">배워 오는 것</span></div>
     <div>
-      <h2><span data-zh="为什么是上海？">왜 상하이인가?</span></h2>
-      <p class="lead" data-zh="上海是技术与消费者相遇的城市。企业在内部完成验证的 AI，在这里以门店、服务与交通的形式面向真实客户运营。研发与量产之后的 B2C 商业化阶段，可以在一座城市内完整确认。">상하이는 기술이 소비자와 만나는 도시입니다. 기업이 내부 검증을 마친 AI가 이곳에서 매장과 서비스, 교통의 형태로 실제 고객을 대상으로 운영됩니다. 연구와 생산 다음 단계인 B2C 상업화를 한 도시 안에서 확인할 수 있습니다.</p>
-
-      <div class="keys">
-        <div><b data-zh="B2C 商业化测试场">B2C 상업화 테스트베드</b><p data-zh="已通过企业内部与工厂验证的技术，在这里直接面向消费者运营。孩子看到的不是展品，而是正在营业的服务。">기업 내부와 생산 현장에서 검증을 마친 기술이 소비자를 대상으로 운영되는 단계입니다. 아이가 보는 것은 전시품이 아니라 영업 중인 서비스입니다.</p></div>
-        <div><b data-zh="旗舰店与总部集中">플래그십·본사 집중</b><p data-zh="主要品牌的首店、直营店与企业总部集中于同一座城市，无需跨城移动即可覆盖多个产业领域。">주요 브랜드의 1호점과 직영점, 기업 본사가 한 도시에 모여 있습니다. 도시를 옮기지 않고 여러 산업 분야를 한 번에 다룰 수 있습니다.</p></div>
-              </div>
-
-      <div class="nums">
-        <div><b data-zh="30 万人">30만 명</b><p data-zh="上海的人工智能从业人员，约占中国全国的三分之一。">상하이의 AI 인력 규모. 중국 전체의 약 3분의 1에 해당합니다.</p></div>
-        <div><b data-zh="6,370 亿元">6,370억 위안</b><p data-zh="2025 年上海人工智能产业规模(规上企业 394 家)，同比增长 39.5%。">2025년 상하이 AI 산업 생산액(일정 규모 이상 기업 394곳). 전년 대비 39.5% 증가했습니다.</p></div>
-              </div>
-      <p class="fine" data-zh="资料来源：上海市政府英文网、上海外商投资指南、China Daily、CGTN 报道(2025—2026)。2026 年 7 月上海世界人工智能大会(WAIC)参展企业 1,100 家以上，展品 3,000 余件中 300 余件为全球首发。">출처: 상하이시 정부 영문 사이트, 상하이 외자유치 안내서, China Daily, CGTN 보도(2025–2026). 2026년 7월 상하이 세계인공지능대회(WAIC) 참가 기업은 1,100곳이 넘었고 전시 3,000여 건 가운데 300여 건이 세계 첫 공개였습니다.</p>
+      <h2><span data-zh="不止于看。">보고 끝나지 않습니다.</span><span data-zh="说出来，做出来，带回家。">말하고 만들어서 돌아옵니다.</span></h2>
+      <p class="lead" data-zh="将用语言驾驭 AI 的一代，需要的是自己的话。这个营从把看到的东西用自己的话说出来开始。AI 已经是孩子在学校里要学的内容，第一步就在现场迈出。">말로 AI를 다루게 될 세대에게 필요한 것은 자기 말입니다. 이 캠프는 본 것을 자기 말로 꺼내는 데서 시작합니다. AI는 이미 학교에서 배우는 내용이고 그 첫걸음을 현장에서 뗍니다.</p>
+      <div class="cols">
+        <div>
+          <div class="of">Artificial Intelligence</div>
+          <h3 data-zh="人工智能">인공지능</h3>
+          <ul>
+            <li data-zh="看机器人，摸机器人，亲手做一个小机器人">로봇을 보고 만져 보고 작은 로봇을 직접 만듭니다</li>
+            <li data-zh="刚看到的技术是什么，当场听 김덕진 所长讲解">방금 본 기술이 무엇인지 김덕진 소장에게 바로 듣습니다</li>
+            <li data-zh="用 AI 把自己的想法做成作品">AI로 자기 생각을 결과물로 만듭니다</li>
+          </ul>
+        </div>
+        <div>
+          <div class="of">Affective Intelligence</div>
+          <h3 data-zh="情感智能">정서지능</h3>
+          <ul>
+            <li data-zh="把看到后的感受用自己的话说出来">본 것에서 느낀 점을 자기 말로 꺼냅니다</li>
+            <li data-zh="和父母互相提问">부모와 질문을 주고받습니다</li>
+            <li data-zh="在大家面前发表自己的想法">사람들 앞에서 자기 생각을 발표합니다</li>
+          </ul>
+        </div>
+        <div>
+          <div class="of">AI × AI</div>
+          <h3 data-zh="带回家的东西">들고 돌아오는 것</h3>
+          <ul>
+            <li data-zh="亲手完成的作品">직접 만든 결과물</li>
+            <li data-zh="结业证书">수료증</li>
+            <li data-zh="亲子营手册">캠프 책자</li>
+          </ul>
+        </div>
+      </div>
     </div>
   </div>
 </section>
 
 <section class="sec" id="people">
   <div class="row">
-    <div class="label"><b>07</b><span data-zh="导师团队">강사진</span></div>
+    <div class="label"><b>08</b><span data-zh="导师">강사진</span></div>
     <div>
       <h2><span data-zh="读懂技术的人，">기술을 읽는 사람,</span><span data-zh="读懂人心的人。">마음을 읽는 사람.</span></h2>
       <p class="lead" data-zh="김덕진 讲解技术，임한나 引导孩子把感受说出来。两人交汇之处，就是最后一天的作品。">김덕진이 기술을 풀어 주고 임한나가 아이의 느낌을 말로 꺼냅니다. 두 사람이 만나는 지점이 마지막 날의 결과물입니다.</p>
@@ -605,13 +664,13 @@ html[lang="zh-CN"] h1,html[lang="zh-CN"] h2,html[lang="zh-CN"] .cols h3,html[lan
 
 <section class="sec" id="include">
   <div class="row">
-    <div class="label"><b>08</b><span data-zh="包含与准备">포함 · 준비</span></div>
+    <div class="label"><b>09</b><span data-zh="包含与准备">포함 · 준비</span></div>
     <div>
       <h2><span data-zh="包含什么，">무엇이 포함되고,</span><span data-zh="需要准备什么？">무엇을 준비하나요?</span></h2>
       <p class="base" data-zh="本营的标准费用为每人 400 万韩元。">이 캠프의 기준 참가비는 1인 400만 원입니다.</p>
       <p class="basesub" data-zh="为纪念第一届亲子营，第一轮的 15 个家庭享第一届纪念优惠。">제1회 키즈 캠프를 여는 뜻으로 1차 15가족에 한해 제1회 기념 할인을 드립니다.</p>
       <div class="price">
-        <div class="hl"><div class="k" data-zh="第一届纪念优惠 · 第一轮先到先得 15 个家庭<span>父母 1 人 + 孩子 1 人 · 不含机票与住宿</span>">제1회 기념 할인 · 1차 선착순 15가족<span>부모 1인 + 어린이 1인 · 항공료·숙박료 미포함</span></div><div class="v" data-zh="450 万韩元">450만 원</div></div>
+        <div class="hl"><div class="k" data-zh="第一届纪念优惠 · 第一轮先到先得 15 个家庭<span>父母 1 人 + 孩子 1 人 · 12 月 15 日截止 · 不含机票与住宿</span>">제1회 기념 할인 · 1차 선착순 15가족<span>부모 1인 + 어린이 1인 · 12월 15일 마감 · 항공료·숙박료 미포함</span></div><div class="v" data-zh="450 万韩元">450만 원</div></div>
         <div><div class="k" data-zh="第一轮结束后<span>父母 1 人 + 孩子 1 人为准</span>">1차 마감 이후<span>부모 1인 + 어린이 1인 기준</span></div><div class="v" data-zh="500 万韩元">500만 원</div></div>
         <div><div class="k" data-zh="每增加 1 名孩子">어린이 1인 추가</div><div class="v sm" data-zh="250 万韩元">250만 원</div></div>
         <div><div class="k" data-zh="每增加 1 名父母">부모 1인 추가</div><div class="v sm" data-zh="200 万韩元">200만 원</div></div>
@@ -653,9 +712,17 @@ html[lang="zh-CN"] h1,html[lang="zh-CN"] h2,html[lang="zh-CN"] .cols h3,html[lan
   </div>
 </section>
 
+<section class="sec ctaband" id="cta">
+  <div>
+    <h2><span data-zh="第一轮截止 12 月 15 日。">1차 모집은 12월 15일에 마감합니다.</span></h2>
+    <p data-zh="先到先得 15 个家庭。第一届纪念优惠仅适用于第一轮。">선착순 15가족입니다. 제1회 기념 할인은 1차 모집에만 적용됩니다.</p>
+    <a class="tb-c big" href="#apply" data-zh="报名 →">참가 신청하기 →</a>
+  </div>
+</section>
+
 <section class="sec" id="faq">
   <div class="row">
-    <div class="label"><b>09</b><span data-zh="常见问题">자주 묻는 질문</span></div>
+    <div class="label"><b>10</b><span data-zh="常见问答">자주 묻는 질문</span></div>
     <div>
       <h2><span data-zh="还想了解什么？">무엇이 궁금하신가요?</span></h2>
       <div class="faq">
@@ -680,7 +747,7 @@ html[lang="zh-CN"] h1,html[lang="zh-CN"] h2,html[lang="zh-CN"] .cols h3,html[lan
 
 <section class="sec" id="apply">
   <div class="row">
-    <div class="label"><b>10</b><span data-zh="报名">신청</span></div>
+    <div class="label"><b>11</b><span data-zh="报名">신청</span></div>
     <div>
       <h2><span data-zh="想一起去吗？">함께 가시겠어요?</span></h2>
       <p class="lead" data-zh="由监护人和孩子一起报名。提交后，负责人确认并发送参加确认与详细说明。">보호자와 자녀가 함께 신청합니다. 신청서를 보내 주시면 담당자가 확인한 뒤 참가 확정과 세부 안내를 드립니다.</p>
@@ -792,7 +859,7 @@ html[lang="zh-CN"] h1,html[lang="zh-CN"] h2,html[lang="zh-CN"] .cols h3,html[lan
 
 <section class="sec" id="contact">
   <div class="row">
-    <div class="label"><b>11</b><span data-zh="联系">문의</span></div>
+    <div class="label"><b>12</b><span data-zh="咨询">문의</span></div>
     <div class="contact">
       <div>
         <div class="where" data-zh="韩国">한국</div>
@@ -880,6 +947,18 @@ html[lang="zh-CN"] h1,html[lang="zh-CN"] h2,html[lang="zh-CN"] .cols h3,html[lan
   try{start=localStorage.getItem('dux-lang')||'ko'}catch(e){}
   if(location.hash==='#zh')start='zh';
   if(start==='zh')setLang('zh');
+})();
+</script>
+<script>
+(function(){
+  var el=document.getElementById('dday'); if(!el)return;
+  var end=new Date(2026,11,15,23,59,59);
+  var left=Math.ceil((end-new Date())/86400000);
+  var ko,zh;
+  if(left>0){ko='12월 15일 1차 마감 · D-'+left;zh='第一轮截止 12 月 15 日 · 倒计时 '+left+' 天';}
+  else{ko='1차 모집 마감';zh='第一轮招募已截止';}
+  el.setAttribute('data-ko',ko);el.setAttribute('data-zh',zh);
+  el.textContent=(document.documentElement.lang==='zh-CN')?zh:ko;
 })();
 </script>
 </body>
