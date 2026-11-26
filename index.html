@@ -328,6 +328,17 @@ html[lang="zh-CN"] h1,html[lang="zh-CN"] h2,html[lang="zh-CN"] .cols h3,html[lan
 .herofacts li{border:1px solid var(--line);background:rgba(255,255,255,.65);padding:5px 12px;font-size:14px;font-weight:500;letter-spacing:-.01em}
 .glance{padding-top:64px}
 .glance .nums{margin-top:0;border-top:0;padding-top:0}
+.pflag{display:inline-block;margin-top:16px;border:1.5px solid var(--accent);color:var(--accent);padding:6px 14px;font-size:14px;font-weight:700;letter-spacing:-.01em}
+.incl{margin-top:34px;border-top:1px solid var(--ink)}
+.incl>div{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:18px;align-items:baseline;padding:14px 0;border-bottom:1px solid var(--line)}
+.incl .n{font-size:16px;font-weight:500;letter-spacing:-.01em}
+.incl .y{font-size:13px;font-weight:700;letter-spacing:-.01em;color:var(--accent);white-space:nowrap}
+.incl .y.no{color:var(--muted)}
+.later{margin-top:34px}
+.later h3{margin:0;font-size:24px;font-family:"Pretendard","NotoSC",sans-serif;font-weight:800;letter-spacing:-.04em}
+html[lang="zh-CN"] .later h3{font-family:"NotoSC","Pretendard",sans-serif;font-weight:900;letter-spacing:-.02em}
+.later ul{list-style:none;margin:14px 0 0;padding:0;border-bottom:1px solid var(--line);max-width:620px}
+.later li{border-top:1px solid var(--line);padding:12px 0;font-size:16px;font-weight:300}
 .ctaband{padding-top:110px}
 .ctaband>div{border-top:1px solid var(--ink);padding-top:30px}
 .ctaband h2{margin:0}
@@ -669,42 +680,32 @@ html[lang="zh-CN"] h1,html[lang="zh-CN"] h2,html[lang="zh-CN"] .cols h3,html[lan
       <h2><span data-zh="包含什么，">무엇이 포함되고,</span><span data-zh="需要准备什么？">무엇을 준비하나요?</span></h2>
       <p class="base" data-zh="本营的标准费用为每人 400 万韩元。">이 캠프의 기준 참가비는 1인 400만 원입니다.</p>
       <p class="basesub" data-zh="为纪念第一届亲子营，第一轮的 15 个家庭享第一届纪念优惠。">제1회 키즈 캠프를 여는 뜻으로 1차 15가족에 한해 제1회 기념 할인을 드립니다.</p>
+      <p class="pflag" data-zh="以下价格均为「机票与住宿自理」">아래 금액은 모두 항공·숙박 별도 기준입니다</p>
       <div class="price">
-        <div class="hl"><div class="k" data-zh="第一届纪念优惠 · 第一轮先到先得 15 个家庭<span>父母 1 人 + 孩子 1 人 · 12 月 15 日截止 · 不含机票与住宿</span>">제1회 기념 할인 · 1차 선착순 15가족<span>부모 1인 + 어린이 1인 · 12월 15일 마감 · 항공료·숙박료 미포함</span></div><div class="v" data-zh="450 万韩元">450만 원</div></div>
+        <div class="hl"><div class="k" data-zh="第一届纪念优惠 · 第一轮先到先得 15 个家庭<span>父母 1 人 + 孩子 1 人 · 12 月 15 日截止</span>">제1회 기념 할인 · 1차 선착순 15가족<span>부모 1인 + 어린이 1인 · 12월 15일 마감</span></div><div class="v" data-zh="450 万韩元">450만 원</div></div>
         <div><div class="k" data-zh="第一轮结束后<span>父母 1 人 + 孩子 1 人为准</span>">1차 마감 이후<span>부모 1인 + 어린이 1인 기준</span></div><div class="v" data-zh="500 万韩元">500만 원</div></div>
         <div><div class="k" data-zh="每增加 1 名孩子">어린이 1인 추가</div><div class="v sm" data-zh="250 万韩元">250만 원</div></div>
         <div><div class="k" data-zh="每增加 1 名父母">부모 1인 추가</div><div class="v sm" data-zh="200 万韩元">200만 원</div></div>
       </div>
-      <p class="pnote" data-zh="以上费用均不含机票与住宿。机票与住宿由各家庭自行准备。">위 금액에는 항공료와 숙박료가 들어 있지 않습니다. 항공권과 호텔은 각 가족이 준비합니다.</p>
-      <div class="cols">
-        <div>
-          <h3 data-zh="亲子营包含">캠프에 포함</h3>
-          <ul>
-            <li data-zh="亲子营的全部课程与活动">캠프 프로그램 전 과정</li>
-            <li data-zh="行程中的餐食">일정 중 식사</li>
-            <li data-zh="当地交通">현지 이동</li>
-            <li data-zh="结业证书、亲子营手册">수료증, 캠프 책자</li>
-          </ul>
-        </div>
-        <div>
-          <h3 data-zh="自行准备">개인 준비</h3>
-          <ul>
-            <li data-zh="往返机票">왕복 항공권</li>
-            <li data-zh="酒店">호텔</li>
-          </ul>
-        </div>
-        <div>
-          <h3 data-zh="另行通知">추후 안내</h3>
-          <ul>
-            <li data-zh="具体日程与参访地点">세부 일정과 방문지</li>
-            <li data-zh="携带物品（可能需要笔记本电脑或平板）">준비물 (노트북이나 태블릿이 필요할 수 있습니다)</li>
-            <li data-zh="旅行保险、入境要求">여행자 보험, 입국 요건</li>
-          </ul>
-        </div>
+      
+      <div class="incl">
+        <div><span class="n" data-zh="亲子营的全部课程与活动">캠프 프로그램 전 과정</span><span class="y" data-zh="包含">포함</span></div>
+        <div><span class="n" data-zh="行程中的餐食">일정 중 식사</span><span class="y" data-zh="包含">포함</span></div>
+        <div><span class="n" data-zh="当地交通">현지 이동</span><span class="y" data-zh="包含">포함</span></div>
+        <div><span class="n" data-zh="结业证书、亲子营手册">수료증 · 캠프 책자</span><span class="y" data-zh="包含">포함</span></div>
+        <div><span class="n" data-zh="往返机票">왕복 항공권</span><span class="y no" data-zh="自理">별도</span></div>
+        <div><span class="n" data-zh="酒店住宿">호텔 숙박</span><span class="y no" data-zh="自理">별도</span></div>
+      </div>
+      <div class="later">
+        <h3 data-zh="另行通知">추후 안내</h3>
+        <ul>
+          <li data-zh="具体日程与参访地点">세부 일정과 방문지</li>
+          <li data-zh="携带物品（可能需要笔记本电脑或平板）">준비물 (노트북이나 태블릿이 필요할 수 있습니다)</li>
+          <li data-zh="旅行保险、入境要求">여행자 보험, 입국 요건</li>
+        </ul>
       </div>
       <div class="scope">
         <p data-zh="亲子营负责活动时间内的行程与交通。">캠프는 프로그램 시간 동안의 일정과 이동을 운영합니다.</p>
-        <p data-zh="机票与住宿由各家庭自行准备。">항공과 숙박은 각 가족이 준비합니다.</p>
         <p data-zh="韩国公民免签入境政策目前公布至 2026 年 12 月 31 日。2027 年 1 月的入境要求一经确定即行通知，请在收到通知后再准备签证与机票。">한국인 무비자 입국 정책은 2026년 12월 31일까지 발표되어 있습니다. 2027년 1월 기준 입국 요건은 확정되는 대로 안내하며, 안내를 받으신 뒤 비자와 항공권을 준비해 주세요.</p>
         <p data-zh="日程与内容可能因当地情况而变动。">일정과 내용은 현지 상황에 따라 변경될 수 있습니다.</p>
       </div>
